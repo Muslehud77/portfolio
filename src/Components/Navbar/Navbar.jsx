@@ -1,13 +1,15 @@
 import { useEffect, useState } from 'react';
-import logo from '../../Assets/logo/logo-only.svg'
+import logo from '../../Assets/logo/logo-only2.svg'
 import { SideBar } from './Hamburger/SideBar';
+import LogoSvg from './LogoSvg';
+import { motion } from 'framer-motion';
 
 
 
 const Navbar = () => {
 
     const [hidden,setHidden] = useState(true)
-    const banner = document.querySelector('#mainBanner')
+
    
    
     useEffect(()=>{
@@ -25,30 +27,34 @@ const Navbar = () => {
 
     return (
       <div className="fixed inset-0 z-50">
-        <div
-          className={`flex justify-center items-center transition-all duration-500 mt-5 ${
-            hidden ? "opacity-100 " : "opacity-0 "
-          }`}
+        <motion.div
+          animate={{
+            translateY: !hidden ? "-10vh" : 0,
+          }}
+          transition={{ duration: 0.5 }}
+          className={`flex justify-center items-center transition-all duration-500 mt-5 `}
         >
           <a target="_black" href="https://github.com/Muslehud77">
-            <img className=" w-20" src={logo} />
+            <LogoSvg />
           </a>
-        </div>
-        <div
-          className={`flex ${
-            hidden
-              ? "justify-center w-screen"
-              : "justify-end w-full absolute top-0"
-          } transition-all duration-500 items-center mt-5`}
-        >
-          <div className="flex transition-all duration-300 border rounded-md border-[#151843] backdrop-blur-sm">
-            <button className="btn bg-transparent border-0">Home</button>
-            <button className="btn bg-transparent border-0">Home</button>
-            <button className="btn bg-transparent border-0">Home</button>
-            <button className="btn bg-transparent border-0">Home</button>
-            <button className="btn bg-transparent border-0">Home</button>
-          
-          </div>
+        </motion.div>
+        <div className="hidden lg:flex justify-center items-center">
+          <motion.div
+            animate={{
+              translateX: !hidden ? "calc(100vw - 65vw)" : 0,
+              translateY: !hidden ? "calc(-7vh)" : 0,
+            }}
+            transition={{ duration: 0.5 }}
+            className={`flex justify-center transition-all duration-500 items-center mt-5`}
+          >
+            <div className="flex transition-all duration-300 border rounded-md border-[#151843] backdrop-blur-sm">
+              <button className="btn bg-transparent border-0">Home</button>
+              <button className="btn bg-transparent border-0">Home</button>
+              <button className="btn bg-transparent border-0">Home</button>
+              <button className="btn bg-transparent border-0">Home</button>
+              <button className="btn bg-transparent border-0">Home</button>
+            </div>
+          </motion.div>
         </div>
         <SideBar />
       </div>
