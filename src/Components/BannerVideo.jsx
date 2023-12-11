@@ -53,11 +53,13 @@ export default function BannerVideo() {
     />
   ) : (
     <div
-    className=""
+      id="mainBanner"
+      className=""
       ref={videoParentRef}
       dangerouslySetInnerHTML={{
         __html: `
         <video
+       
         class='h-screen w-full object-cover'
           loop
           muted
