@@ -18,31 +18,114 @@ import img17 from '../../Assets/images/17.jpg'
 import img18 from '../../Assets/images/18.jpg'
 import img19 from '../../Assets/images/19.jpg'
 import img20 from '../../Assets/images/20.jpg'
+import { useEffect, useRef } from 'react'
+import gsap from 'gsap'
+import {ScrollTrigger} from "gsap/ScrollTrigger"
+gsap.registerPlugin(ScrollTrigger)
 
 
 const AboutMe = () => {
+
+    const section = useRef(null)
+    const items = useRef(null)
+    const itemsImg = useRef(null)
+    const overlay = useRef(null)
+    const overlayH1 = useRef(null)
+
+    
+
+    useEffect(()=>{
+        
+        const el = section.current
+
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: el,
+            pin: true,
+            scrub: 1,
+            start: "top top",
+            end: "bottom bottom",
+          
+          },
+        });
+
+         tl.to(itemsImg.current, { scale: 1,duration:5 }, 2.2);
+         tl.to(items.current, { scale: 2, rotate: 0, duration: 5 });
+
+        //  tl.to(".overlay", { height: "100%" }, 0.2);
+        //  tl.to(".overlay h1", { scale: 1 }, 0.6);
+         tl.to(items.current, { scale: 1.5, opacity: 0.5, duration: 2 }, 2.2);
+
+     
+    },[])
+
+
+    const images = [
+      img1,
+      img2,
+      img3,
+      img4,
+      img5,
+      img6,
+      img7,
+      img8,
+      img9,
+      img10,
+      img11,
+      img12,
+      img13,
+      img14,
+      img15,
+      img16,
+      img17,
+      img18,
+      img19,
+      img20,
+      img3,
+      img4,
+      img5,
+      img6,
+      img7,
+      img10,
+      img11,
+      img12,
+      img13,
+      img14,
+      img15,
+      img16,
+      img5,
+      img6,
+      img7,
+      img8,
+     
+    ];
+
+
     return (
-      <div className="flex flex-wrap justify-center items-center">
-        <img className="h-72 w-60 rotate-45 object-cover" src={img6} />
-        <img className="h-72 w-60 rotate-45 object-cover" src={img7} />
-        <img className="h-72 w-60 rotate-45 object-cover" src={img8} />
-        <img className="h-72 w-60 rotate-45 object-cover" src={img9} />
-        <img className="h-72 w-60 rotate-45 object-cover" src={img10} />
-        <img className="h-72 w-60 rotate-45 object-cover" src={img11} />
-        <img className="h-72 w-60 rotate-45 object-cover" src={img12} />
-        <img className="h-72 w-60 rotate-45 object-cover" src={img13} />
-        <img className="h-72 w-60 rotate-45 object-cover" src={img1} />
-        <img className="h-72 w-60 rotate-45 object-cover" src={img2} />
-        <img className="h-72 w-60 rotate-45 object-cover" src={img3} />
-        <img className="h-72 w-60 rotate-45 object-cover" src={img4} />
-        <img className="h-72 w-60 rotate-45 object-cover" src={img5} />
-        <img className="h-72 w-60 rotate-45 object-cover" src={img14} />
-        <img className="h-72 w-60 rotate-45 object-cover" src={img15} />
-        <img className="h-72 w-60 rotate-45 object-cover" src={img16} />
-        <img className="h-72 w-60 rotate-45 object-cover" src={img17} />
-        <img className="h-72 w-60 rotate-45 object-cover" src={img18} />
-        <img className="h-72 w-60 rotate-45 object-cover" src={img19} />
-        <img className="h-72 w-60 rotate-45 object-cover" src={img20} />
+      <div
+        ref={section}
+        className="h-screen bg-gradient-to-bl from-[#0C0A21] to-black section relative w-full overflow-hidden"
+      >
+        <div
+          ref={items}
+          className="flex w-[130%] flex-wrap justify-start items-center absolute top-[50%] left-[50%] aboutTranslate "
+        >
+          {images.map((img, i) => (
+            <div
+              className="m-3 h-72 w-60  overflow-hidden transition-all duration-300 hover:scale-105"
+              key={i}
+            >
+              <img
+                ref={itemsImg}
+                className="opacity-50 scale-105 w-full h-full  transition-all duration-300  object-cover"
+                src={img}
+              />
+            </div>
+          ))}
+        </div>
+        <div ref={overlay} className="overlay">
+          <h1 ref={overlayH1}>AWESOME</h1>
+        </div>
       </div>
     );
 };

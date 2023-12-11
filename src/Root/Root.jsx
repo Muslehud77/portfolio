@@ -5,9 +5,10 @@ import AboutMe from '../Sections/AboutMe/AboutMe';
 
 const Root = () => {
     return (
-      <div>
+      <div className="overflow-x-hidden ">
         <BannerVideo />
-        <AboutMe/>
+        <AboutMe />
+       
       </div>
     );
 };

@@ -53,6 +53,7 @@ export default function BannerVideo() {
     />
   ) : (
     <div
+    className=""
       ref={videoParentRef}
       dangerouslySetInnerHTML={{
         __html: `
