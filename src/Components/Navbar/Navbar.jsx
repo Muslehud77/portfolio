@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
-import logo from '../Assets/logo/musleh-logo-white.png'
+import logo from '../../Assets/logo/logo-only.svg'
+import { SideBar } from './Hamburger/SideBar';
 
 
 
@@ -30,7 +31,7 @@ const Navbar = () => {
           }`}
         >
           <a target="_black" href="https://github.com/Muslehud77">
-            <img className="h-10 w-10" src={logo} />
+            <img className=" w-20" src={logo} />
           </a>
         </div>
         <div
@@ -46,8 +47,10 @@ const Navbar = () => {
             <button className="btn bg-transparent border-0">Home</button>
             <button className="btn bg-transparent border-0">Home</button>
             <button className="btn bg-transparent border-0">Home</button>
+          
           </div>
         </div>
+        <SideBar />
       </div>
     );
 };
