@@ -1,12 +1,14 @@
 
-import { Outlet } from 'react-router-dom';
+import BannerVideo from '../Components/BannerVideo';
+import AboutMe from '../Sections/AboutMe/AboutMe';
+
 
 const Root = () => {
     return (
-        <div>
-            <h1>Hello</h1>
-            <Outlet></Outlet>
-        </div>
+      <div>
+        <BannerVideo />
+        <AboutMe/>
+      </div>
     );
 };
 
