@@ -26,10 +26,13 @@ const Navbar = () => {
 
 
     return (
-      <div className="fixed inset-0 z-50">
+      <div
+       
+        className="fixed inset-0 z-50 h-20"
+      >
         <motion.div
           animate={{
-            translateY: !hidden ? "-10vh" : 0,
+            opacity: hidden ? 1 : 0,
           }}
           transition={{ duration: 0.5 }}
           className={`flex justify-center items-center transition-all duration-500 mt-5 `}

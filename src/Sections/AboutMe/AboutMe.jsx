@@ -21,9 +21,12 @@ import img20 from '../../Assets/images/20.jpg'
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import {ScrollTrigger} from "gsap/ScrollTrigger"
+import LocomotiveScroll from "locomotive-scroll";
+import Lenis from "@studio-freight/lenis";
+
 gsap.registerPlugin(ScrollTrigger)
 
-
+const scroll = new LocomotiveScroll();
 const AboutMe = () => {
 
     const section = useRef(null)
@@ -35,6 +38,7 @@ const AboutMe = () => {
     
 
     useEffect(()=>{
+      
         
         const el = section.current
 
@@ -45,7 +49,7 @@ const AboutMe = () => {
             scrub: 1,
             start: "top top",
             end: "bottom bottom",
-          
+          // markers:true
           },
         });
 
@@ -55,7 +59,7 @@ const AboutMe = () => {
         //  tl.to(".overlay", { height: "100%" }, 0.2);
         //  tl.to(".overlay h1", { scale: 1 }, 0.6);
          tl.to(items.current, { scale: 1.5, opacity: 0.5, duration: 2 }, 2.2);
-
+        
      
     },[])
 
@@ -103,6 +107,7 @@ const AboutMe = () => {
 
     return (
       <div
+        
         ref={section}
         className="h-screen bg-gradient-to-bl from-[#0C0A21] to-black section relative w-full overflow-hidden"
       >
@@ -123,8 +128,8 @@ const AboutMe = () => {
             </div>
           ))}
         </div>
-        <div ref={overlay} className="overlay">
-          <h1 ref={overlayH1}>AWESOME</h1>
+        <div>
+          <h1>AWESOME</h1>
         </div>
       </div>
     );
