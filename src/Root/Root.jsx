@@ -7,6 +7,10 @@ import Banner from '../Sections/Banner/Banner';
 import Lenis from "@studio-freight/lenis";
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
+import Projects from '../Sections/Projects/Projects';
+
+
+
 
 
 
@@ -30,7 +34,7 @@ const Root = () => {
       lenis.raf(time);
       requestAnimationFrame(raf);
     }
-
+ 
     requestAnimationFrame(raf);
    },[])
 
@@ -40,8 +44,9 @@ const Root = () => {
         <div>
           <Banner />
           <AboutMe />
-         
+          <Projects/>
         </div>
+        
       </div>
     );
 };

@@ -18,6 +18,7 @@ const Reveal = ({children}) => {
         mainControls.start("visible")
         slideControls.start("visible")
        } 
+     
 
     },[isInView])
 

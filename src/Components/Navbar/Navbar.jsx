@@ -26,10 +26,7 @@ const Navbar = () => {
 
 
     return (
-      <div
-       
-        className="fixed inset-0 z-50 h-20"
-      >
+      <div className="fixed inset-0 z-50 lg:h-20">
         <motion.div
           animate={{
             opacity: hidden ? 1 : 0,
@@ -44,8 +41,8 @@ const Navbar = () => {
         <div className="hidden lg:flex justify-center items-center">
           <motion.div
             animate={{
-              translateX: !hidden ? "calc(100vw - 65vw)" : 0,
-              translateY: !hidden ? "calc(-7vh)" : 0,
+              translateX: hidden ? "calc(100vw - 65vw)" : 0,
+              translateY: hidden ? "calc(78vh)" : "calc(-8vh)",
             }}
             transition={{ duration: 0.5 }}
             className={`flex justify-center transition-all duration-500 items-center mt-5`}
@@ -55,7 +52,14 @@ const Navbar = () => {
               <button className="btn bg-transparent border-0">Home</button>
               <button className="btn bg-transparent border-0">Home</button>
               <button className="btn bg-transparent border-0">Home</button>
-              <button className="btn bg-transparent border-0">Home</button>
+              <a
+                href="https://drive.google.com/uc?id=1042e8IfW4FZSan5gvIjq71RN9Ts9UKvz&export=download"
+               
+                download="https://drive.google.com/uc?id=1042e8IfW4FZSan5gvIjq71RN9Ts9UKvz&export=download"
+                className="btn bg-transparent border-0"
+              >
+                Resume
+              </a>
             </div>
           </motion.div>
         </div>

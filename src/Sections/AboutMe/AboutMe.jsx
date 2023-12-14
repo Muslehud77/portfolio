@@ -21,24 +21,23 @@ import img20 from '../../Assets/images/20.jpg'
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import {ScrollTrigger} from "gsap/ScrollTrigger"
-import LocomotiveScroll from "locomotive-scroll";
-import Lenis from "@studio-freight/lenis";
+import TechNologies from './TechNologies'
+
 
 gsap.registerPlugin(ScrollTrigger)
 
-const scroll = new LocomotiveScroll();
+
 const AboutMe = () => {
 
     const section = useRef(null)
     const items = useRef(null)
     const itemsImg = useRef(null)
-    const overlay = useRef(null)
-    const overlayH1 = useRef(null)
+ 
 
     
 
     useEffect(()=>{
-      
+        gsap.registerPlugin();
         
         const el = section.current
 
@@ -47,18 +46,18 @@ const AboutMe = () => {
             trigger: el,
             pin: true,
             scrub: 1,
-            start: "top top",
-            end: "bottom bottom",
-          // markers:true
+            start: "center top",
+            end: "bottom top",
+         
           },
         });
 
-         tl.to(itemsImg.current, { scale: 1,duration:5 }, 2.2);
-         tl.to(items.current, { scale: 2, rotate: 0, duration: 5 });
+         tl.to(itemsImg.current, { scale: 1,duration:1 }, 1);
+         tl.to(items.current, { scale: 2, rotate: 0, duration: 1 });
 
         //  tl.to(".overlay", { height: "100%" }, 0.2);
         //  tl.to(".overlay h1", { scale: 1 }, 0.6);
-         tl.to(items.current, { scale: 1.5, opacity: 0.5, duration: 2 }, 2.2);
+         tl.to(items.current, { scale: 1.5, opacity: 0.5, duration: 2 }, 1);
         
      
     },[])
@@ -107,9 +106,8 @@ const AboutMe = () => {
 
     return (
       <div
-        
         ref={section}
-        className="h-screen bg-gradient-to-bl from-[#0C0A21] to-black section relative w-full overflow-hidden"
+        className="h-screen  bg-gradient-to-bl from-[#0C0A21] to-black section relative w-full overflow-hidden"
       >
         <div
           ref={items}
@@ -128,8 +126,23 @@ const AboutMe = () => {
             </div>
           ))}
         </div>
-        <div>
-          <h1>AWESOME</h1>
+        <div className="flex flex-col md:flex-row container mx-auto p-10 justify-center items-start h-full">
+          <div className="w-full md:w-1/2">
+            <h1 className="text-xl md:text-3xl lg:text-5xl font-montserrat font-semibold">
+              As a MERN stack developer, I specialize in crafting dynamic
+              interfaces with React, employing Tailwind CSS for modern design,
+              and utilizing Express.js for robust back-end development. My
+              passion lies in creating websites with clean, user-friendly
+              experiences.
+            </h1>
+          </div>
+          <div className="w-full md:w-1/2 h-full flex flex-col justify-end">
+            <h3 className="text-2xl font-montserrat uppercase">
+              Technologies That I'm familiar with
+            </h3>
+            <div className="w-full h-1 bg-white"></div>
+            <TechNologies />
+          </div>
         </div>
       </div>
     );
