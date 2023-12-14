@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import {  useEffect, useRef } from "react";
-import BannerVideo from "../../Components/BannerVideo";
+import BackgroundVideo from "../../Components/Background/BackgoundVideo";
 import Reveal from "../../Components/Reveal/Reveal";
 import me from "../../Assets/personal.png"
 import { FaArrowRightLong, FaFacebook, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa6";
@@ -10,7 +10,7 @@ const Banner = () => {
 
     return (
       <div ref={ref} className="relative h-screen w-screen">
-        <BannerVideo />
+        <BackgroundVideo />
 
         <div className="flex justify-center items-center w-full h-full"></div>
         <div className="absolute top-0 flex flex-col items-center justify-center  h-screen text-start w-screen">

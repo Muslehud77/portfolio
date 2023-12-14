@@ -11,7 +11,7 @@ import Reveal from '../../Components/Reveal/Reveal'
 
 const TechNologies = () => {
 
-    const cls = 'w-8 h-8 md:w-16 md:h-16 hover:scale-110 transition-all duration-2 object-cover bg-black relative rounded'
+    const cls = 'w-8 h-8 md:w-16 cursor-pointer hover:grayscale-[80%] md:h-16 hover:scale-110 transition-all duration-2 object-cover bg-black relative rounded'
 
     return (
       <Reveal>

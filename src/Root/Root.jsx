@@ -8,6 +8,7 @@ import Lenis from "@studio-freight/lenis";
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import Projects from '../Sections/Projects/Projects';
+import BackgroundOverlay from '../Components/Background/BackgroundOverlay';
 
 
 
@@ -41,11 +42,10 @@ const Root = () => {
     return (
       <div ref={scrollRef} id="scroll-container" className="overflow-x-hidden ">
         <Navbar />
-        <div>
           <Banner />
+          <BackgroundOverlay/>
           <AboutMe />
           <Projects/>
-        </div>
         
       </div>
     );

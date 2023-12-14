@@ -11,32 +11,21 @@ body::-webkit-scrollbar {
     padding-box: 0;
 }
 
-.aboutTranslate{
-    transform: translate(-50%, -50%) rotate(45deg);
+.word {
+  position: relative;
+}
+.line-mask {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #0d0d0d;
+  opacity: 0.8;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  
 }
 
-.overlay {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    backdrop-filter: blur(3px);
-    background-color: rgba(0, 0, 0, 0.6);
-    width: 100vw;
-    height: 0vh;
-    /* height: 100vh; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
-    font-size: clamp(3rem, 8vw, 10rem);
-    overflow: hidden;
-}
-
-.overlay h1 {
-    transform: scale(0);
-}
 
 
 .nav {

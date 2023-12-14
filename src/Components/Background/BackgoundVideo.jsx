@@ -1,5 +1,5 @@
 import { useRef, useState, useEffect } from "react";
-import mainVideo from "../Assets/banner-bg.mp4"
+import mainVideo from "../../Assets/banner-bg.mp4"
 const isSafari = () => {
   const ua = navigator.userAgent.toLowerCase();
   return ua.indexOf("safari") > -1 && ua.indexOf("chrome") < 0;
@@ -7,7 +7,7 @@ const isSafari = () => {
 
 
 
-export default function BannerVideo() {
+export default function BackgroundVideo() {
   const videoParentRef = useRef();
   const [shouldUseImage, setShouldUseImage] = useState(false);
   useEffect(() => {
@@ -60,7 +60,7 @@ export default function BannerVideo() {
         __html: `
         <video
        
-        class='h-screen w-full object-cover'
+        class='h-screen w-full object-cover fixed inset-0'
           loop
           muted
           autoplay

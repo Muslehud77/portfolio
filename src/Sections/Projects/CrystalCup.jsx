@@ -2,7 +2,7 @@ import crystal from "../../Assets/Projects/crystalCup.png";
 import Reveal from "../../Components/Reveal/Reveal";
 const CrystalCUp = () => {
   return (
-    <div className="flex flex-col md:flex-row-reverse justify-between gap-5">
+    <div className="flex flex-col  justify-between gap-5">
       <Reveal>
         <img className="w-[60vw] md:w-[60vw] object-cover" src={crystal} />
       </Reveal>

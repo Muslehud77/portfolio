@@ -3,7 +3,7 @@ import talent from "../../Assets/Projects/talent.png";
 import Reveal from "../../Components/Reveal/Reveal";
 const TalentSphere = () => {
     return (
-      <div className="flex flex-col md:flex-row justify-between gap-5">
+      <div className="flex flex-col  justify-between gap-5">
         <Reveal>
           <img className="w-[60vw] md:w-[60vw]  object-cover" src={talent} />
         </Reveal>
