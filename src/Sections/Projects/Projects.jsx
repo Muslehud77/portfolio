@@ -10,14 +10,14 @@ import TalentSphere from "./TalentSphere";
 
 const Projects = () => {
     return (
-      <div className="pt-56">
+      <div className="pt-56 ">
         <div className="p-10 container mx-auto  section relative w-full overflow-hidden">
           <ProjectsHead />
-          <div className="mt-10 space-y-8">
+          <div className="mt-10 snap-proximity snap-y ">
             <TalentSphere />
-            <PhotoBerry/>
+            <PhotoBerry />
             <CrystalCUp />
-            <DeviceDynasty/>
+            <DeviceDynasty />
           </div>
         </div>
       </div>

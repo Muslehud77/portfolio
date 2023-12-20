@@ -3,6 +3,7 @@ import logo from '../../Assets/logo/logo-only2.svg'
 import { SideBar } from './Hamburger/SideBar';
 import LogoSvg from './LogoSvg';
 import { motion } from 'framer-motion';
+import Menus from './Menus';
 
 
 
@@ -45,22 +46,9 @@ const Navbar = () => {
               translateY: hidden ? "calc(78vh)" : "calc(-8vh)",
             }}
             transition={{ duration: 0.5 }}
-            className={`flex justify-center transition-all duration-500 items-center mt-5`}
+           
           >
-            <div className="flex transition-all duration-300 border rounded-md border-[#151843] backdrop-blur-sm">
-              <button className="btn bg-transparent border-0">Home</button>
-              <button className="btn bg-transparent border-0">Home</button>
-              <button className="btn bg-transparent border-0">Home</button>
-              <button className="btn bg-transparent border-0">Home</button>
-              <a
-                href="https://drive.google.com/uc?id=1042e8IfW4FZSan5gvIjq71RN9Ts9UKvz&export=download"
-               
-                download="https://drive.google.com/uc?id=1042e8IfW4FZSan5gvIjq71RN9Ts9UKvz&export=download"
-                className="btn bg-transparent border-0"
-              >
-                Resume
-              </a>
-            </div>
+           <Menus/>
           </motion.div>
         </div>
         <SideBar />

@@ -2,7 +2,7 @@ import photoberry from "../../Assets/Projects/photoberry.png";
 import Reveal from "../../Components/Reveal/Reveal";
 const PhotoBerry = () => {
   return (
-    <div className="flex flex-col justify-between gap-5">
+    <div className="flex flex-col  h-screen snap-center justify-center gap-5">
       <Reveal>
         <img className="w-[60vw] md:w-[60vw] object-cover" src={photoberry} />
       </Reveal>
@@ -34,18 +34,14 @@ const PhotoBerry = () => {
                 <button className="btn btn-sm btn-outline text-xs">
                   ThreeJs
                 </button>
-                <button className="btn btn-sm btn-outline text-xs">
-                 Aos
-                </button>
-              
+                <button className="btn btn-sm btn-outline text-xs">Aos</button>
+
                 <button className="btn btn-sm btn-outline text-xs">
                   Firebase
                 </button>
                 <button className="btn btn-sm btn-outline text-xs">
                   Tailwind
                 </button>
-               
-                
               </div>
             </Reveal>
           </div>
