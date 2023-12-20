@@ -43,7 +43,7 @@ const Navbar = () => {
           <motion.div
             animate={{
               translateX: hidden ? "calc(100vw - 65vw)" : 0,
-              translateY: hidden ? "calc(78vh)" : "calc(-8vh)",
+              translateY: hidden ? "calc(78vh)" : "calc(-4vh)",
             }}
             transition={{ duration: 0.5 }}
            
