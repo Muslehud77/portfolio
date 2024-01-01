@@ -39,13 +39,9 @@ const Navbar = () => {
             <LogoSvg />
           </a>
         </motion.div>
-        <div className="hidden lg:flex justify-center items-center">
+        <div className="hidden fixed right-0 bottom-0 lg:flex justify-center items-center">
           <motion.div
-            animate={{
-              translateX: hidden ? "calc(100vw - 65vw)" : 0,
-              translateY: hidden ? "calc(78vh)" : "calc(-4vh)",
-            }}
-            transition={{ duration: 0.5 }}
+           
            
           >
            <Menus/>

@@ -12,6 +12,10 @@ const AboutMe = () => {
   const ref = useRef(null)
   const lineRef = useRef(null)
 
+  
+
+
+
   useEffect(() => {
     let typeSplit;
 
@@ -24,6 +28,7 @@ const AboutMe = () => {
           start: "top center",
           end: "bottom center",
           scrub: 1,
+        
        
         },
       });
@@ -49,12 +54,6 @@ const AboutMe = () => {
       });
 
 
-
-
-
-
-
-
     }
 
     const runSplit=()=> {
@@ -65,9 +64,17 @@ const AboutMe = () => {
      
 
       createAnimation();
+ 
     }
 
     runSplit();
+
+window.addEventListener("resize",()=>{
+      runSplit();
+       createAnimation();
+    })
+
+
   }, []);
 
 
@@ -78,7 +85,7 @@ const AboutMe = () => {
           <h1
             ref={ref}
             id="target"
-            className="text-2xl transition-all duration-500 text-gray-600 md:text-3xl lg:text-5xl font-montserrat font-semibold"
+            className="text-2xl transition-all duration-500 text-gray-600  lg:text-3xl xl:text-5xl font-montserrat font-semibold"
           >
             As a MERN stack developer, I specialize in crafting dynamic
             interfaces with React, employing Tailwind CSS for modern design, and

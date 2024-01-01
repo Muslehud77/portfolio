@@ -1,10 +1,17 @@
-import crystal from "../../Assets/Projects/crystalCup.png";
+import crystal from "../../Assets/Projects/Crystal/crystal-thumbnail.mp4";
 import Reveal from "../../Components/Reveal/Reveal";
+import ThumbnailVideo from "./ThumbnailVideo";
 const CrystalCUp = () => {
   return (
-    <div className="flex flex-col  h-screen snap-center  justify-center gap-5">
+    <div
+     
+      className="flex justify-center gap-5"
+    >
       <Reveal>
-        <img className="w-[60vw] md:w-[60vw] object-cover" src={crystal} />
+        <div className="w-96">
+          {" "}
+          <ThumbnailVideo>{crystal}</ThumbnailVideo>
+        </div>
       </Reveal>
       <div className="flex flex-col gap-5 ">
         <div>

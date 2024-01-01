@@ -63,7 +63,7 @@ const LogoSvg = () => {
               />
             </clipPath>
           </defs>
-          <g clip-path="url(#c80a3c7af9)">
+          <g clipPath="url(#c80a3c7af9)">
             <motion.path
               initial={{ pathLength: 0 }}
               animate={{ pathLength: 1 }}

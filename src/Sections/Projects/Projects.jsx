@@ -1,4 +1,5 @@
 
+import Crystal from "./Crystal";
 import CrystalCUp from "./CrystalCup";
 import DeviceDynasty from "./DeviceDynasty";
 import PhotoBerry from "./PhotoberryStory";
@@ -14,10 +15,11 @@ const Projects = () => {
         <div className="p-10 container mx-auto  section relative w-full overflow-hidden">
           <ProjectsHead />
           <div className="mt-10 snap-proximity snap-y ">
-            <TalentSphere />
-            <PhotoBerry />
-            <CrystalCUp />
-            <DeviceDynasty />
+            <Crystal/>
+            {/* <TalentSphere /> */}
+            {/* <PhotoBerry /> */}
+            {/* <CrystalCUp /> */}
+            {/* <DeviceDynasty /> */}
           </div>
         </div>
       </div>

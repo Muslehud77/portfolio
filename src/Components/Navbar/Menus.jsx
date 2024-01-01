@@ -11,8 +11,9 @@ const Menus = () => {
     { name: "Settings", icon: <IoHomeOutline />, dis: "translate-x-64" },
   ];
   return (
+    // rotate-[-90deg]
     <div>
-      <div className="border max-h-[4.4rem] px-6 rounded-xl backdrop-blur-sm">
+      <div className="border scale-90 max-h-[4.4rem] px-6 rounded-xl backdrop-blur-sm ">
         <ul className="flex relative">
           <span
             className={`bg-white border-4 border-black h-16 w-16 absolute -top-5 rounded-full text-white duration-500 ${menus[active].dis}`}
