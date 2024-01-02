@@ -69,10 +69,10 @@ const AboutMe = () => {
 
     runSplit();
 
-window.addEventListener("resize",()=>{
-      runSplit();
-       createAnimation();
-    })
+// window.addEventListener("resize",()=>{
+//       runSplit();
+//        createAnimation();
+//     })
 
 
   }, []);
