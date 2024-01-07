@@ -61,36 +61,31 @@ const AboutMe = () => {
         types: "lines, words",
       });
 
-     
-
       createAnimation();
  
     }
 
     runSplit();
 
-// window.addEventListener("resize",()=>{
-//       runSplit();
-//        createAnimation();
-//     })
-
-
   }, []);
 
 
   return (
     <div className="relative">
-      <div className="flex justify-around h-screen flex-col md:flex-row container mx-auto p-10 md:justify-center items-start ">
+      <div
+        id="About"
+        className="flex justify-around h-screen flex-col md:flex-row container mx-auto p-10 md:justify-center items-start "
+      >
         <div className="w-full md:w-1/2">
           <h1
             ref={ref}
             id="target"
             className="text-2xl transition-all duration-500 text-gray-600  lg:text-3xl xl:text-5xl font-montserrat font-semibold"
           >
-            As a MERN stack developer, I specialize in crafting dynamic
-            interfaces with React, employing Tailwind CSS for modern design, and
-            utilizing Express.js for robust back-end development. My passion
-            lies in creating websites with clean, user-friendly experiences.
+            As a Web developer, I specialize in crafting dynamic interfaces with
+            React, employing Tailwind CSS for modern design, and utilizing
+            Express.js for robust back-end development. My passion lies in
+            creating websites with clean, user-friendly experiences.
           </h1>
         </div>
         <div className="w-full md:w-1/2 md:h-full flex flex-col justify-end">

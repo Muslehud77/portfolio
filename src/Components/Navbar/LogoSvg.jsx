@@ -3,21 +3,6 @@ import { motion } from 'framer-motion';
 
 const LogoSvg = () => {
 
-    const pathVariants = {
-      transition: {
-        duration: 4,
-        ease: "easeInOut",
-      },
-      variants: {
-        visible: {
-          pathLength: 1,
-        },
-        hidden: {
-          pathLength: 0,
-        },
-      },
-    };
-
 
     
     const menuVariants = {

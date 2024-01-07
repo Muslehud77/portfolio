@@ -4,9 +4,9 @@ import { IoOpenOutline } from "react-icons/io5";
 import Reveal from './../../Components/Reveal/Reveal';
 const Crystal = () => {
     return (
-      <div className="md:flex flex-row-reverse justify-center items-center text-left group">
+      <div className="lg:flex flex-row-reverse justify-center items-center text-left group">
         <Reveal>
-          <div className="w-full h-full relative mb-5 md:mb-0">
+          <div className="w-full h-full relative mb-5 lg:mb-0">
             <img src={crystal} className="rounded-xl" />
             <div className="bg-black transition-all rounded-xl duration-500 opacity-50 group-hover:bg-opacity-0 w-full h-full absolute inset-0"></div>
           </div>
@@ -18,7 +18,7 @@ const Crystal = () => {
               <h2 className="text-3xl text-white font-semibold">CrystalCup</h2>
             </div>
           </Reveal>
-          <div className="transition-all md:w-[700px] duration-500 group-hover:shadow-[0_0_30px_white] shadow-[0_0_30px_#313647] rounded-xl text-left bg-[#09081F] backdrop-blur-sm p-5 md:-mr-16">
+          <div className="transition-all lg:w-[700px] duration-500 group-hover:shadow-[0_0_30px_white] shadow-[0_0_30px_#313647] rounded-xl text-left bg-[#09081F] backdrop-blur-sm p-5 lg:-mr-16">
             <Reveal>
               <h3 className="text-xl ">
                 It's a café website that allows users to view the menu and place
@@ -28,7 +28,7 @@ const Crystal = () => {
           </div>
           <div className="space-y-10">
             <Reveal>
-              <div className="tracking-widest  flex flex-wrap justify-start md:ml-2">
+              <div className="tracking-widest  flex flex-wrap justify-start lg:ml-2">
                 <span className="text-sm mr-2 font-serif">React.Js</span>
                 <span className="text-sm mr-2 font-serif">FramerMotion</span>
                 <span className="text-sm mr-2 font-serif">Node.Js</span>

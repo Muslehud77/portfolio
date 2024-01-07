@@ -9,6 +9,7 @@ import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import Projects from '../Sections/Projects/Projects';
 import BackgroundOverlay from '../Components/Background/BackgroundOverlay';
+import Contact from '../Sections/Contact/Contact';
 
 
 
@@ -46,6 +47,7 @@ const Root = () => {
           <BackgroundOverlay/>
           <AboutMe />
           <Projects/>
+          <Contact/>
         
       </div>
     );

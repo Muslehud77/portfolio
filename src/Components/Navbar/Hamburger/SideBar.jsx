@@ -26,14 +26,14 @@ const sidebar = {
   },
 };
 
-export const SideBar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+export const SideBar = ({ isOpen, setIsOpen }) => {
+  
   const containerRef = useRef(null);
   const { height } = useDimensions(containerRef);
-console.log(isOpen);
+
   return (
     <motion.nav
-      className={`nav ${isOpen ? "w-[100vw]" : "w-0" }`}
+      className={`nav ${isOpen ? "w-[100vw]" : "w-0"}`}
       initial={false}
       animate={isOpen ? "open" : "closed"}
       custom={height}

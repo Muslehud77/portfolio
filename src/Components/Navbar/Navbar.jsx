@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import logo from '../../Assets/logo/logo-only2.svg'
+
 import { SideBar } from './Hamburger/SideBar';
 import LogoSvg from './LogoSvg';
 import { motion } from 'framer-motion';
@@ -8,10 +8,10 @@ import Menus from './Menus';
 
 
 const Navbar = () => {
-
+    const [isOpen, setIsOpen] = useState(false);
     const [hidden,setHidden] = useState(true)
 
-   
+    
    
     useEffect(()=>{
         const switchNav = ()=>{
@@ -27,7 +27,7 @@ const Navbar = () => {
 
 
     return (
-      <div className="fixed inset-0 z-50 lg:h-20">
+      <div className={`fixed inset-0 z-50 ${!isOpen ? "h-20" : ""} `}>
         <motion.div
           animate={{
             opacity: hidden ? 1 : 0,
@@ -39,15 +39,10 @@ const Navbar = () => {
             <LogoSvg />
           </a>
         </motion.div>
-        <div className="hidden fixed right-0 bottom-0 lg:flex justify-center items-center">
-          <motion.div
-           
-           
-          >
-           <Menus/>
-          </motion.div>
+        <div className="hidden  fixed right-0 bottom-0 lg:flex justify-center items-center">
+          <Menus hidden={hidden} />
         </div>
-        <SideBar />
+        <SideBar isOpen={isOpen} setIsOpen={setIsOpen} />
       </div>
     );
 };

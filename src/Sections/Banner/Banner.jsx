@@ -9,7 +9,7 @@ const Banner = () => {
 
 
     return (
-      <div ref={ref} className="relative h-screen w-screen">
+      <div id="Musleh" ref={ref} className="relative h-screen w-screen">
         <BackgroundVideo />
 
         <div className="flex justify-center items-center w-full h-full"></div>
@@ -18,12 +18,12 @@ const Banner = () => {
             <div className="space-y-1">
               <Reveal>
                 <h1 className="text-5xl md:text-7xl text-white font-montserrat font-bold">
-                  Hi, I'm <br /> Musleh
+                  Hi, I'm <br /> Musleh <span className="text-lg">from Bangladesh.</span>
                 </h1>
               </Reveal>
               <Reveal>
                 <h3 className="text-2xl text-white font-montserrat">
-                  I'm a <span className="font-bold">MERN Stack Developer</span>
+                  I Build things <span className="font-bold">for the web.</span>
                 </h3>
               </Reveal>
               <Reveal>

@@ -4,9 +4,9 @@ import { IoOpenOutline } from "react-icons/io5";
 import Reveal from "./../../Components/Reveal/Reveal";
 const Talent = () => {
   return (
-    <div className="md:flex justify-center items-center text-right group">
+    <div className="lg:flex justify-center items-center text-right group">
       <Reveal>
-        <div className="w-full h-full relative mb-5 md:mb-0">
+        <div className="w-full h-full relative mb-5 lg:mb-0">
           <img src={talent} className="rounded-xl" />
           <div className="bg-black transition-all rounded-xl duration-500 opacity-50 group-hover:bg-opacity-0 w-full h-full absolute inset-0"></div>
         </div>
@@ -18,7 +18,7 @@ const Talent = () => {
             <h2 className="text-3xl text-white font-semibold">TalentSphere</h2>
           </div>
         </Reveal>
-        <div className="transition-all md:w-[700px] duration-500 group-hover:shadow-[0_0_30px_white] shadow-[0_0_30px_#313647] rounded-xl text-right bg-[#09081F] backdrop-blur-sm p-5 md:-ml-16">
+        <div className="transition-all lg:w-[700px] duration-500 group-hover:shadow-[0_0_30px_white] shadow-[0_0_30px_#313647] rounded-xl text-right bg-[#09081F] backdrop-blur-sm p-5 lg:-ml-16">
           <Reveal>
             <h3 className="text-xl ">
               It's a contest website that enables users to participate in
@@ -29,7 +29,7 @@ const Talent = () => {
         </div>
         <div className="space-y-10">
           <Reveal>
-            <div className="tracking-widest  flex flex-wrap justify-end md:ml-2">
+            <div className="tracking-widest  flex flex-wrap justify-end lg:ml-2">
               <span className="text-sm mr-2 font-serif">React.Js</span>
               <span className="text-sm mr-2 font-serif">FramerMotion</span>
               <span className="text-sm mr-2 font-serif">Node.Js</span>
