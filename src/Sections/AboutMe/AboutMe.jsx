@@ -5,14 +5,14 @@ import { gsap } from "gsap";
 
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-gsap.registerPlugin(ScrollTrigger);
+
 
 
 const AboutMe = () => {
   const ref = useRef(null)
   const lineRef = useRef(null)
 
-  
+  gsap.registerPlugin(ScrollTrigger);
 
 
 

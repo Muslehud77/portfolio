@@ -23,7 +23,7 @@ const Menus = ({hidden}) => {
       name: "Projects",
       icon: <BsRocketTakeoffFill />,
       dis: "translate-x-32",
-      offset: 180,
+      offset: 40,
     },
     { name: "Photos", icon: <IoHomeOutline />, dis: "translate-x-48" },
     { name: "Settings", icon: <IoHomeOutline />, dis: "translate-x-64" },
@@ -40,8 +40,8 @@ const Menus = ({hidden}) => {
     <div>
       <div
         className={`border ${
-          !hidden && "opacity-50"
-        } hover:opacity-100 duration-300 scale-90 max-h-[4.4rem] px-6 rounded-xl backdrop-blur-sm`}
+          !hidden && "opacity-50 bg-black"
+        } hover:opacity-100 hover:bg-transparent  duration-300 scale-90 max-h-[4.4rem] px-6 rounded-xl backdrop-blur-sm`}
       >
         <ul className="flex relative">
           <span
@@ -56,7 +56,7 @@ const Menus = ({hidden}) => {
                 offset={menu.offset}
                 duration={500}
                 onClick={() => setActive(i)}
-                onSetActive={()=>handleSetActive(i)}
+                onSetActive={() => handleSetActive(i)}
                 className={`flex flex-col items-center text-center pt-6 relative `}
               >
                 <span

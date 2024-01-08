@@ -4,7 +4,7 @@ import { IoOpenOutline } from "react-icons/io5";
 import Reveal from "./../../Components/Reveal/Reveal";
 const Talent = () => {
   return (
-    <div className="lg:flex justify-center items-center text-right group">
+    <div className="lg:flex justify-center items-center w-full text-right group px-10">
       <Reveal>
         <div className="w-full h-full relative mb-5 lg:mb-0">
           <img src={talent} className="rounded-xl" />
@@ -18,7 +18,7 @@ const Talent = () => {
             <h2 className="text-3xl text-white font-semibold">TalentSphere</h2>
           </div>
         </Reveal>
-        <div className="transition-all lg:w-[700px] duration-500 group-hover:shadow-[0_0_30px_white] shadow-[0_0_30px_#313647] rounded-xl text-right bg-[#09081F] backdrop-blur-sm p-5 lg:-ml-16">
+        <div className="transition-all xl:w-[700px] duration-500 group-hover:shadow-[0_0_30px_white] shadow-[0_0_30px_#313647] rounded-xl text-right bg-[#09081F] backdrop-blur-sm p-5 lg:-ml-16">
           <Reveal>
             <h3 className="text-xl ">
               It's a contest website that enables users to participate in

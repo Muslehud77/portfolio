@@ -21,7 +21,7 @@ const Photoberryy = () => {
             </h2>
           </div>
         </Reveal>
-        <div className="transition-all lg:w-[700px] duration-500 group-hover:shadow-[0_0_30px_white] shadow-[0_0_30px_#313647] rounded-xl text-left bg-[#09081F] backdrop-blur-sm p-5 lg:-mr-16">
+        <div className="transition-all xl:w-[700px] duration-500 group-hover:shadow-[0_0_30px_white] shadow-[0_0_30px_#313647] rounded-xl text-left bg-[#09081F] backdrop-blur-sm p-5 lg:-mr-16">
           <Reveal>
             {" "}
             <h3 className="text-xl ">

@@ -18,7 +18,7 @@ const Banner = () => {
             <div className="space-y-1">
               <Reveal>
                 <h1 className="text-5xl md:text-7xl text-white font-montserrat font-bold">
-                  Hi, I'm <br /> Musleh <span className="text-lg">from Bangladesh.</span>
+                  Hi, I'm <br /> Musleh <span className="text-lg">based in China.</span>
                 </h1>
               </Reveal>
               <Reveal>
@@ -36,28 +36,28 @@ const Banner = () => {
               <Reveal>
                 <div className="flex gap-2 mt-1">
                   <button className="flex justify-center items-center gap-2 text-white">
-                    <a target="_blank" href="https://github.com/Muslehud77">
+                    <a rel="noreferrer" target="_blank" href="https://github.com/Muslehud77">
                       {" "}
                       <FaArrowRightLong />
                     </a>
                   </button>
                   <button className="hover:text-white text-xl transition-all duration-300">
-                    <a target="_blank" href="https://www.linkedin.com/in/muslehud777/">
+                    <a rel="noreferrer" target="_blank" href="https://www.linkedin.com/in/muslehud777/">
                       <FaLinkedin />
                     </a>
                   </button>
                   <button className="hover:text-white text-xl transition-all duration-300">
-                    <a target="_blank" href="https://github.com/Muslehud77">
+                    <a rel="noreferrer" target="_blank" href="https://github.com/Muslehud77">
                       <FaGithub />
                     </a>
                   </button>
                   <button className="hover:text-white text-xl transition-all duration-300">
-                    <a target="_blank" href="https://www.facebook.com/Musleh.ud/">
+                    <a rel="noreferrer" target="_blank" href="https://www.facebook.com/Musleh.ud/">
                       <FaFacebook />
                     </a>
                   </button>
                   <button className="hover:text-white text-xl transition-all duration-300">
-                    <a target="_blank" href="https://www.instagram.com/muslehud77/">
+                    <a rel="noreferrer" target="_blank" href="https://www.instagram.com/muslehud77/">
                       <FaInstagram />
                     </a>
                   </button>
