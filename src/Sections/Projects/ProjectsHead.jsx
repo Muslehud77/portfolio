@@ -3,7 +3,7 @@ import Reveal from "../../Components/Reveal/Reveal";
 
 const ProjectsHead = () => {
     return (
-      <div className="flex -mb-10  flex-wrap w-full  container px-10">
+      <div className="flex mb-10 lg:mb-0  flex-wrap w-full  container px-5 lg:">
         <div className="lg:w-1/2 w-full mb-6 lg:mb-0">
           <Reveal>
             <h1 className="text-3xl font-montserrat md:text-5xl font-medium title-font mb-2 text-white">

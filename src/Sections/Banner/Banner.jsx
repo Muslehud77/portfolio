@@ -4,6 +4,7 @@ import BackgroundVideo from "../../Components/Background/BackgoundVideo";
 import Reveal from "../../Components/Reveal/Reveal";
 import me from "../../Assets/personal.png"
 import { FaArrowRightLong, FaFacebook, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa6";
+import Image from "./Image";
 const Banner = () => {
     const ref = useRef(null)
 
@@ -67,7 +68,8 @@ const Banner = () => {
             <div>
               <Reveal>
                 {" "}
-                <img className="hidden image md:flex w-96 opacity-80" src={me} />
+                {/* <img className="hidden image md:flex w-96 opacity-80" src={me} /> */}
+                <Image me={me}/>
               </Reveal>
             </div>
           </div>

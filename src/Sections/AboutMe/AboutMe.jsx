@@ -17,7 +17,10 @@ const AboutMe = () => {
 
 
   useEffect(() => {
-    let typeSplit;
+
+   const typeSplit = new SplitType(ref.current, {
+      types: "words",
+    });
 
     const createAnimation=()=> {
       let allMasks = document.querySelectorAll(".word ");
@@ -56,16 +59,10 @@ const AboutMe = () => {
 
     }
 
-    const runSplit=()=> {
-      typeSplit = new SplitType(ref.current, {
-        types: "lines, words",
-      });
 
-      createAnimation();
- 
-    }
+    
 
-    runSplit();
+    return createAnimation();
 
   }, []);
 

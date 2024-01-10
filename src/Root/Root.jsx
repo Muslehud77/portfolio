@@ -50,7 +50,7 @@ const Root = () => {
           <Projects/>
           <ServicesSection/>
           <Contact/>
-        
+          
       </div>
     );
 };

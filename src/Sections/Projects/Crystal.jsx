@@ -4,7 +4,7 @@ import { IoOpenOutline } from "react-icons/io5";
 import Reveal from './../../Components/Reveal/Reveal';
 const Crystal = () => {
     return (
-      <div className="lg:flex flex-row-reverse justify-center items-center text-left group">
+      <div className="lg:flex  flex-row-reverse justify-center items-center text-left group">
         <Reveal>
           <div className="w-full h-full relative mb-5 lg:mb-0">
             <img src={crystal} className="rounded-xl" />

@@ -1,10 +1,12 @@
 import ServiceHead from "./ServiceHead";
+import Services from "./Services";
 
 
 const ServicesSection = () => {
     return (
-        <div className="h-screen">
+        <div className="">
             <ServiceHead/>
+            <Services/>
         </div>
     );
 };

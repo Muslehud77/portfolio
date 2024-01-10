@@ -4,7 +4,7 @@ import { IoOpenOutline } from "react-icons/io5";
 import Reveal from "./../../Components/Reveal/Reveal";
 const Talent = () => {
   return (
-    <div className="lg:flex justify-center items-center w-full text-right group px-10">
+    <div className="lg:flex justify-center items-center w-full text-right group xl:px-10">
       <Reveal>
         <div className="w-full h-full relative mb-5 lg:mb-0">
           <img src={talent} className="rounded-xl" />
