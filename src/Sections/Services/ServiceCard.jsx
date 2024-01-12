@@ -2,15 +2,15 @@
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { FiMousePointer } from "react-icons/fi";
 
-const Example = () => {
+const ServiceCard = ({children}) => {
   return (
     <div className="grid w-full place-content-center bg-gradient-to-br from-indigo-500 to-violet-500 px-4 py-12 text-slate-900">
-      <TiltCard />
+      <TiltCard>{children}</TiltCard>
     </div>
   );
 };
 
-const TiltCard = () => {
+const TiltCard = ({ children }) => {
   const x = useMotionValue(0);
   const y = useMotionValue(0);
 
@@ -58,7 +58,7 @@ const TiltCard = () => {
         rotateX,
         transformStyle: "preserve-3d",
       }}
-      className="relative h-96 w-72 rounded-xl bg-gradient-to-br from-indigo-300 to-violet-300"
+      className="relative h-96 w-96 rounded-xl bg-gradient-to-br from-indigo-300 to-violet-300"
     >
       <div
         style={{
@@ -67,23 +67,10 @@ const TiltCard = () => {
         }}
         className="absolute inset-4 grid place-content-center rounded-xl bg-white shadow-lg"
       >
-        <FiMousePointer
-          style={{
-            transform: "translateZ(75px)",
-          }}
-          className="mx-auto text-4xl"
-        />
-        <p
-          style={{
-            transform: "translateZ(50px)",
-          }}
-          className="text-center text-2xl font-bold"
-        >
-          HOVER ME
-        </p>
+      {children}
       </div>
     </motion.div>
   );
 };
 
-export default Example;
+export default ServiceCard;

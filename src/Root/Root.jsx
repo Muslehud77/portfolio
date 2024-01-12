@@ -19,7 +19,7 @@ import ServicesSection from '../Sections/Services/ServicesSection';
 
 
 const Root = () => {
-   const scrollRef = useRef(null)
+  
 
    useEffect(()=>{
     const lenis = new Lenis();
@@ -42,7 +42,7 @@ const Root = () => {
    },[])
 
     return (
-      <div ref={scrollRef} id="scroll-container" className="overflow-x-hidden ">
+      <div  className="overflow-x-hidden ">
         <Navbar />
           <Banner />
           <BackgroundOverlay/>
@@ -50,7 +50,7 @@ const Root = () => {
           <Projects/>
           <ServicesSection/>
           <Contact/>
-          
+
       </div>
     );
 };

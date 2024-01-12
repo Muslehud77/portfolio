@@ -1,6 +1,6 @@
-
+import React from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-
+import { FiMousePointer } from "react-icons/fi";
 import me from "../../Assets/personal.png";
 const Image = () => {
   return (
@@ -58,7 +58,7 @@ const Tilt = () => {
         rotateX,
         transformStyle: "preserve-3d",
       }}
-      className="relative h-screen w-96 rounded-xl "
+      className="relative h-96 w-72 rounded-xl bg-gradient-to-br from-indigo-300/10 "
     >
       <div
         style={{
@@ -67,7 +67,11 @@ const Tilt = () => {
         }}
         className="absolute inset-4 grid place-content-center rounded-xl "
       >
-        <img className="hidden image md:flex w-96 opacity-80" src={me} />
+        <img
+          
+          className="hidden image md:flex w-96 opacity-80"
+          src={me}
+        />
       </div>
     </motion.div>
   );

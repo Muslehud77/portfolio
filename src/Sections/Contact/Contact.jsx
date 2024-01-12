@@ -1,71 +1,237 @@
-
-
+import { useEffect, useRef, useState } from "react";
+import { useForm } from "react-hook-form";
+import { IoMdCheckmarkCircleOutline } from "react-icons/io";
+import loading from "../../Assets/Loading.gif"
+import {
+  Link,
+  Button,
+  Element,
+  Events,
+  animateScroll as scroll,
+  scrollSpy,
+  scroller,
+} from "react-scroll";
 const Contact = () => {
+
+    const {
+      register,
+      handleSubmit,
+     reset,
+      watch,
+      formState: { errors },
+    } = useForm();
+
+    const refToScroll = useRef(null);
+
+    const [email,setEmail] = useState(null)
+    const [name,setName] = useState(null)
+    const [description,setDescription] = useState(null)
+
+     const onSubmit = (data) => {
+        
+       
+        setEmail(data?.email)
+     
+        setName(data?.name)
+        setDescription(data?.description)
+
+     };
+
+    const onEnterPress = (e) => {
+       if (e.keyCode == 13 && e.shiftKey == false) {
+         scroller.scrollTo("actions", {
+           duration: 1500,
+           delay: 100,
+           smooth: "easeInOutQuint",
+           containerId: "actions",
+         });
+          setDescription(e.target.value)
+       }
+     };
+
+     const resetForm = ()=>{
+        reset();
+        setName(null);
+        setEmail(null);
+        setDescription(null);
+     }
+
+
+
+
+
+
     return (
-        <div>
-            <section className="text-gray-600 body-font relative">
-  <div className="container px-5 py-24 mx-auto">
-    <div className="flex flex-col text-center w-full mb-12">
-      <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Contact Us</h1>
-      <p className="lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify.</p>
-    </div>
-    <div className="lg:w-1/2 md:w-2/3 mx-auto">
-      <div className="flex flex-wrap -m-2">
-        <div className="p-2 w-1/2">
-          <div className="relative">
-            <label  className="leading-7 text-sm text-gray-600">Name</label>
-            <input type="text" id="name" name="name" className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-green-500 focus:bg-white focus:ring-2 focus:ring-green-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"/>
+      <div
+        ref={refToScroll}
+        id="form"
+        data-lenis-prevent
+        className="w-full block relative overflow-auto"
+      >
+        <section className="px-4 py-12 ">
+          <div className="h-96 bg-slate-950/70 backdrop-blur rounded-lg w-full max-w-3xl mx-auto overflow-y-auto shadow-xl cursor-text font-mono">
+            <div className="w-full p-3 bg-slate-900 flex items-center gap-1 sticky top-0">
+              <div className="w-3 h-3 rounded-full bg-red-500"></div>
+              <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+              <div className="w-3 h-3 rounded-full bg-green-500"></div>
+              <span className="text-sm text-slate-200 font-semibold absolute left-[50%] -translate-x-[50%]">
+                contact me
+              </span>
+            </div>
+            <div className="p-2 text-slate-100 text-lg">
+              <p>Hey there! We're excited to link 🔗</p>
+
+              <form onSubmit={handleSubmit(onSubmit)}>
+                {/* email section      */}
+
+                <div className="">
+                  <p>
+                    To start, could you give us{" "}
+                    <span className="text-violet-300">your email?</span>
+                  </p>
+                  {email ? (
+                    <span className="text-emerald-400 flex gap-2 items-center">
+                      {" "}
+                      <IoMdCheckmarkCircleOutline /> {email}{" "}
+                    </span>
+                  ) : (
+                    <div className="flex">
+                      <p>
+                        <span className="text-emerald-400">➜</span>{" "}
+                        <span className="text-cyan-300">~</span>{" "}
+                        <span className="opacity-50">Enter email: </span>
+                      </p>
+                      <input
+                        autoComplete="off"
+                        {...register("email", {
+                          pattern: {
+                            value:
+                              /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
+                          },
+                        })}
+                        className="pl-2 border-none outline-none bg-transparent max-w-96"
+                      />
+                    </div>
+                  )}
+                </div>
+                {errors.email && (
+                  <p className="text-red-400">
+                    I bet you this is not a valid email address :){" "}
+                    <span className="text-white">Haha!</span>
+                  </p>
+                )}
+                {/* email section  */}
+
+                <div className="">
+                  {email && (
+                    <p>
+                      Awesome! And what's
+                      <span className="text-violet-300"> your name?</span>
+                    </p>
+                  )}
+                  {email ? (
+                    name ? (
+                      <span className="text-emerald-400 flex gap-2 items-center">
+                        {" "}
+                        <IoMdCheckmarkCircleOutline /> {name}{" "}
+                      </span>
+                    ) : (
+                      <div className="flex">
+                        <p>
+                          <span className="text-emerald-400">➜</span>{" "}
+                          <span className="text-cyan-300">~</span>{" "}
+                          <span className="opacity-50">Enter name: </span>
+                        </p>
+                        <input
+                          autoFocus={email ? true : false}
+                          autoComplete="off"
+                          {...register("name")}
+                          className="pl-2 border-none outline-none bg-transparent max-w-7xl"
+                        />
+                      </div>
+                    )
+                  ) : (
+                    ""
+                  )}
+                </div>
+
+                {/* description section  */}
+
+                <div className="">
+                  {name && (
+                    <p>
+                      Perfect! And
+                      <span className="text-violet-300">
+                        {" "}
+                        how can I help you?
+                      </span>
+                    </p>
+                  )}
+
+                  {name ? (
+                    description ? (
+                      <span className="text-emerald-400 flex gap-2 items-center">
+                        {" "}
+                        <IoMdCheckmarkCircleOutline /> {description}{" "}
+                      </span>
+                    ) : (
+                      <div className="flex w-full">
+                        <p className="w-72 md:w-fit">
+                          <span className="text-emerald-400">➜</span>{" "}
+                          <span className="text-cyan-300">~</span>{" "}
+                          <span className="opacity-50">
+                            Enter description:{" "}
+                          </span>
+                        </p>
+                        <textarea
+                          style={{ resize: "none" }}
+                          onKeyDown={onEnterPress}
+                          autoFocus={email ? true : false}
+                          autoComplete="off"
+                          {...register("description")}
+                          className="pl-2 border-none outline-none bg-transparent w-8/12 max-w-2xl"
+                        />
+                      </div>
+                    )
+                  ) : (
+                    <></>
+                  )}
+                  {description && (
+                    <>
+                      <p>Excellent! Here is what i've got:</p>
+                      <p>
+                        <span className="text-blue-300">email: </span> {email}
+                      </p>
+                      <p>
+                        <span className="text-blue-300">name: </span> {name}
+                      </p>
+                      <p>
+                        <span className="text-blue-300">description: </span>{" "}
+                        {description}
+                      </p>
+                      <p>Look good?</p>
+                    </>
+                  )}
+                </div>
+              </form>
+              {description && (
+                <div id="actions" className="flex gap-2 mt-2">
+                  <button
+                    onClick={resetForm}
+                    className="btn bg-white btn-sm capitalize"
+                  >
+                    Restart
+                  </button>
+                  <button className="btn bg-blue-500 text-white  btn-sm capitalize">
+                    Send it!
+                  </button>
+                </div>
+              )}
+              <img className="w-28" src={loading} />
+            </div>
           </div>
-        </div>
-        <div className="p-2 w-1/2">
-          <div className="relative">
-            <label  className="leading-7 text-sm text-gray-600">Email</label>
-            <input type="email" id="email" name="email" className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-green-500 focus:bg-white focus:ring-2 focus:ring-green-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"/>
-          </div>
-        </div>
-        <div className="p-2 w-full">
-          <div className="relative">
-            <label  className="leading-7 text-sm text-gray-600">Message</label>
-            <textarea id="message" name="message" className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-green-500 focus:bg-white focus:ring-2 focus:ring-green-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
-          </div>
-        </div>
-        <div className="p-2 w-full">
-          <button className="flex mx-auto text-white bg-green-500 border-0 py-2 px-8 focus:outline-none hover:bg-green-600 rounded text-lg">Button</button>
-        </div>
-        <div className="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center">
-          <a className="text-green-500">example@email.com</a>
-          <p className="leading-normal my-5">49 Smith St.
-            <br/>Saint Cloud, MN 56301
-          </p>
-          <span className="inline-flex">
-            <a className="text-gray-500">
-              <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-5 h-5" viewBox="0 0 24 24">
-                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
-              </svg>
-            </a>
-            <a className="ml-4 text-gray-500">
-              <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-5 h-5" viewBox="0 0 24 24">
-                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
-              </svg>
-            </a>
-            <a className="ml-4 text-gray-500">
-              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-5 h-5" viewBox="0 0 24 24">
-                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
-              </svg>
-            </a>
-            <a className="ml-4 text-gray-500">
-              <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-5 h-5" viewBox="0 0 24 24">
-                <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
-              </svg>
-            </a>
-          </span>
-        </div>
+        </section>
       </div>
-    </div>
-  </div>
-</section>
-        </div>
     );
 };
 
