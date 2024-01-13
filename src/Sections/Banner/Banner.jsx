@@ -19,7 +19,8 @@ const Banner = () => {
             <div className="space-y-1">
               <Reveal>
                 <h1 className="text-5xl md:text-7xl text-white font-montserrat font-bold">
-                  Hi, I'm <br /> Musleh <span className="text-lg">based in China.</span>
+                  Hi, I'm <br /> Musleh{" "}
+                  <span className="text-lg">based in China.</span>
                 </h1>
               </Reveal>
               <Reveal>
@@ -37,39 +38,59 @@ const Banner = () => {
               <Reveal>
                 <div className="flex gap-2 mt-1">
                   <button className="flex justify-center items-center gap-2 text-white">
-                    <a rel="noreferrer" target="_blank" href="https://github.com/Muslehud77">
+                    <a
+                      rel="noreferrer"
+                      target="_blank"
+                      href="https://github.com/Muslehud77"
+                    >
                       {" "}
                       <FaArrowRightLong />
                     </a>
                   </button>
                   <button className="hover:text-white text-xl transition-all duration-300">
-                    <a rel="noreferrer" target="_blank" href="https://www.linkedin.com/in/muslehud777/">
+                    <a
+                      rel="noreferrer"
+                      target="_blank"
+                      href="https://www.linkedin.com/in/muslehud777/"
+                    >
                       <FaLinkedin />
                     </a>
                   </button>
                   <button className="hover:text-white text-xl transition-all duration-300">
-                    <a rel="noreferrer" target="_blank" href="https://github.com/Muslehud77">
+                    <a
+                      rel="noreferrer"
+                      target="_blank"
+                      href="https://github.com/Muslehud77"
+                    >
                       <FaGithub />
                     </a>
                   </button>
                   <button className="hover:text-white text-xl transition-all duration-300">
-                    <a rel="noreferrer" target="_blank" href="https://www.facebook.com/Musleh.ud/">
+                    <a
+                      rel="noreferrer"
+                      target="_blank"
+                      href="https://www.facebook.com/Musleh.ud/"
+                    >
                       <FaFacebook />
                     </a>
                   </button>
                   <button className="hover:text-white text-xl transition-all duration-300">
-                    <a rel="noreferrer" target="_blank" href="https://www.instagram.com/muslehud77/">
+                    <a
+                      rel="noreferrer"
+                      target="_blank"
+                      href="https://www.instagram.com/muslehud77/"
+                    >
                       <FaInstagram />
                     </a>
                   </button>
                 </div>
               </Reveal>
             </div>
-            <div>
+            <div className="hidden image md:flex">
               <Reveal>
                 {" "}
                 {/* <img className="hidden image md:flex w-96 opacity-80" src={me} /> */}
-                <Image me={me}/>
+                <Image me={me} />
               </Reveal>
             </div>
           </div>

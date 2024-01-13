@@ -69,7 +69,7 @@ const Tilt = () => {
       >
         <img
           
-          className="hidden image md:flex w-96 opacity-80"
+          className=" w-96 opacity-80"
           src={me}
         />
       </div>
