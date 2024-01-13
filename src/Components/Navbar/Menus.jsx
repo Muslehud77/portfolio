@@ -25,8 +25,8 @@ const Menus = ({hidden}) => {
       dis: "translate-x-32",
       offset: 40,
     },
-    { name: "Photos", icon: <IoHomeOutline />, dis: "translate-x-48" },
-    { name: "Settings", icon: <IoHomeOutline />, dis: "translate-x-64" },
+    { name: "Services", icon: <IoHomeOutline />, dis: "translate-x-48" },
+    { name: "Contact", icon: <IoHomeOutline />, dis: "translate-x-64" },
   ];
 
    const handleSetActive = (to) => {

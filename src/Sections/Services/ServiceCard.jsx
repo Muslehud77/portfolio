@@ -4,7 +4,7 @@ import { FiMousePointer } from "react-icons/fi";
 
 const ServiceCard = ({children}) => {
   return (
-    <div className="grid w-full place-content-center bg-gradient-to-br from-indigo-500 to-violet-500 px-4 py-12 text-slate-900">
+    <div className="flex justify-center items-center w-full h-full mb-10 lg:mb-0">
       <TiltCard>{children}</TiltCard>
     </div>
   );
@@ -58,7 +58,7 @@ const TiltCard = ({ children }) => {
         rotateX,
         transformStyle: "preserve-3d",
       }}
-      className="relative h-96 w-96 rounded-xl bg-gradient-to-br from-indigo-300 to-violet-300"
+      className="relative h-96 w-full rounded-xl bg-gradient-to-br from-indigo-300 to-violet-300"
     >
       <div
         style={{

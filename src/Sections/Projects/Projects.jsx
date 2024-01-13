@@ -50,7 +50,7 @@ const Projects = () => {
   return (
     <div id="Projects" className="pt-10">
       <div className=" w-full relative overflow-hidden">
-        <div className="xl:absolute flex justify-center items-center w-full -top-0 lg:top-20">
+        <div className="xl:absolute flex justify-center items-center w-full -top-0 lg:top-5">
           <ProjectsHead />
         </div>
         <div ref={triggerRef}>

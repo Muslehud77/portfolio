@@ -88,9 +88,12 @@ const Contact = () => {
   };
 
   return (
-    <div id="form" data-lenis-prevent className="w-full block relative ">
+    <div id="form" className="w-full block relative ">
       <section className="px-4 py-12 ">
-        <div className="h-96 bg-slate-950/70 backdrop-blur rounded-lg w-full max-w-3xl mx-auto  overflow-x-hidden overflow-y-auto shadow-xl cursor-text font-mono">
+        <div
+          data-lenis-prevent
+          className="h-96 bg-slate-950/70 backdrop-blur rounded-lg w-full max-w-3xl mx-auto  overflow-x-hidden overflow-y-auto shadow-xl cursor-text font-mono"
+        >
           <div className="w-full p-3 bg-slate-900 flex items-center gap-1 sticky top-0">
             <div className="w-3 h-3 rounded-full bg-red-500"></div>
             <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
