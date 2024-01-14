@@ -20,6 +20,7 @@ const Navbar = () => {
             }else{
                 setHidden(true)
             }
+            console.log(window);
         }
         window.addEventListener('scroll',switchNav)
     },[])

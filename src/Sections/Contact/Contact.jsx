@@ -88,7 +88,7 @@ const Contact = () => {
   };
 
   return (
-    <div id="form" className="w-full block relative ">
+    <div id="Contact" className="w-full block relative ">
       <section className="px-4 py-12 ">
         <div
           data-lenis-prevent

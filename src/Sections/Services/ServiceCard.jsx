@@ -1,6 +1,6 @@
 
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-import { FiMousePointer } from "react-icons/fi";
+
 
 const ServiceCard = ({children}) => {
   return (

@@ -1,15 +1,20 @@
-import { useState } from "react";
-import { IoHomeOutline } from "react-icons/io5";
+import {useState } from "react";
+
 import { FaRegUser } from "react-icons/fa";
 import { TfiMenuAlt } from "react-icons/tfi";
 import { BsRocketTakeoffFill } from "react-icons/bs";
+import { MdHomeRepairService } from "react-icons/md";
+
+import { GrContact } from "react-icons/gr";
 import { Link } from "react-scroll";
+
+ 
 
 const Menus = ({hidden}) => {
     const [active,setActive] = useState(0)
-
-
-
+    const [observer,setObserver] = useState(true)
+    
+   
 
   const menus = [
     { name: "Musleh", icon: <FaRegUser />, dis: "translate-x-0", offset: -100 },
@@ -23,16 +28,37 @@ const Menus = ({hidden}) => {
       name: "Projects",
       icon: <BsRocketTakeoffFill />,
       dis: "translate-x-32",
-      offset: 40,
+      offset: -40,
     },
-    { name: "Services", icon: <IoHomeOutline />, dis: "translate-x-48" },
-    { name: "Contact", icon: <IoHomeOutline />, dis: "translate-x-64" },
+    {
+      name: "Services",
+      icon: <MdHomeRepairService />,
+      dis: "translate-x-48",
+      offset: -300,
+    },
+    {
+      name: "Contact",
+      icon: <GrContact />,
+      dis: "translate-x-64",
+      offset: -500,
+    },
   ];
 
-   const handleSetActive = (to) => {
+  const activeMenu = (i)=>{
+ 
+     setObserver(false);
+  
+     setActive(i)
+    
+     setTimeout(() => {
+      setObserver(true);
    
-    setActive(to);
-  };
+     }, 2000);
+    
+  }
+
+  
+
 
 
 
@@ -55,8 +81,9 @@ const Menus = ({hidden}) => {
                 smooth={true}
                 offset={menu.offset}
                 duration={500}
-                onClick={() => setActive(i)}
-                onSetActive={() => handleSetActive(i)}
+                isDynamic={true}
+                onClick={() => activeMenu(i)}
+                onSetActive={() => observer && setActive(i)}
                 className={`flex flex-col items-center text-center pt-6 relative `}
               >
                 <span

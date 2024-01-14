@@ -3,7 +3,7 @@ import ServiceCard from './ServiceCard';
 
 const Services = () => {
     return (
-      <div className="container px-10 py-16 mx-auto">
+      <div id='Services' className="container px-10 py-16 mx-auto">
         <div className="md:flex gap-20">
           <ServiceCard>
             <div className="h-full bg-gray-100 bg-opacity-75 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative">
