@@ -1,8 +1,11 @@
 /* eslint-disable react/prop-types */
-import React from 'react';
+
+import { useRef } from 'react';
 import { IoMdCheckmarkCircleOutline } from 'react-icons/io';
 
-const ContactEmail = ({ email , register,errors}) => {
+const ContactEmail = ({ email, register, errors }) => {
+
+
   return (
     <div className="">
       <p>
@@ -16,7 +19,7 @@ const ContactEmail = ({ email , register,errors}) => {
         </span>
       ) : (
         <div className="md:flex">
-          <div className='min-w-fit'>
+          <div className="min-w-fit">
             <p>
               <span className="text-emerald-400">➜</span>{" "}
               <span className="text-cyan-300">~</span>{" "}

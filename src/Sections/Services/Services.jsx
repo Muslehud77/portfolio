@@ -4,9 +4,9 @@ import ServiceCard from './ServiceCard';
 const Services = () => {
     return (
       <div id='Services' className="container px-10 py-16 mx-auto">
-        <div className="md:flex gap-20">
+        <div className="lg:flex gap-20">
           <ServiceCard>
-            <div className="h-full bg-gray-100 bg-opacity-75 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative">
+            <div className="h-full bg-opacity-75 px-2 pt-10 pb-24 lg:px-8 rounded-lg overflow-hidden text-center relative">
               <h2 className="font-montserrat tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
                 Front-End
               </h2>
@@ -22,7 +22,7 @@ const Services = () => {
           </ServiceCard>
 
           <ServiceCard>
-            <div className="h-full bg-gray-100 bg-opacity-75 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative">
+            <div className="h-full bg-opacity-75 px-2 pt-10 pb-24 lg:px-8 rounded-lg overflow-hidden text-center relative">
               <h2 className="font-montserrat tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
                 Back-End
               </h2>
@@ -38,7 +38,7 @@ const Services = () => {
           </ServiceCard>
 
           <ServiceCard>
-            <div className="h-full bg-gray-100 bg-opacity-75 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative">
+            <div className="h-full bg-opacity-75 px-2 pt-10 pb-24 lg:px-8 rounded-lg overflow-hidden text-center relative">
               <h2 className="font-montserrat tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
                 Full-Stack Magic
               </h2>

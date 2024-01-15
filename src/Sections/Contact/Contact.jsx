@@ -22,11 +22,14 @@ const Contact = () => {
   const refToScroll = useRef(null);
   const success = useRef(null);
   const form = useRef(null);
+ 
   const [email, setEmail] = useState(null);
   const [name, setName] = useState(null);
   const [description, setDescription] = useState(null);
   const [loading, setLoading] = useState(false);
   const [sent,setSent] = useState(false);
+ 
+
 
   const onSubmit = (data) => {
     setEmail(data?.email);
@@ -88,6 +91,8 @@ const Contact = () => {
       );
   };
 
+
+
   return (
     <div id="Contact" className="w-full block relative mt-10">
       <section className="px-4 py-12 ">
@@ -95,6 +100,7 @@ const Contact = () => {
           {" "}
           <div
             data-lenis-prevent
+           
             className="h-96 bg-slate-950/70 backdrop-blur rounded-lg w-full max-w-3xl mx-auto  overflow-x-hidden overflow-y-auto shadow-xl cursor-text font-mono"
           >
             <div className="w-full p-3 bg-slate-900 flex items-center gap-1 sticky top-0">
@@ -113,9 +119,11 @@ const Contact = () => {
                 {/* email section      */}
 
                 <ContactEmail
+                
                   email={email}
                   register={register}
                   errors={errors}
+                  
                 />
 
                 {/* name section  */}

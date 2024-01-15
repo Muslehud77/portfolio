@@ -23,13 +23,18 @@ const variants = {
 export const Links = ({ children }) => {
 
   return (
-    <motion.li
-       
-      variants={variants}
-      whileHover={{ scale: 1.1 }}
-      whileTap={{ scale: 0.95 }}
-    >
-     {children}
-    </motion.li>
+    <>
+      {" "}
+      <motion.div
+        className=""
+        variants={variants}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.95 }}
+      >
+        {children}
+      </motion.div>
+      
+
+    </>
   );
 };

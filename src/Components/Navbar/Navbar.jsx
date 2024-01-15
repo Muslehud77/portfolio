@@ -20,7 +20,7 @@ const Navbar = () => {
             }else{
                 setHidden(true)
             }
-            console.log(window);
+            
         }
         window.addEventListener('scroll',switchNav)
     },[])
@@ -43,7 +43,10 @@ const Navbar = () => {
         <div className="hidden  fixed right-0 bottom-0 lg:flex justify-center items-center">
           <Menus hidden={hidden} />
         </div>
-        <SideBar isOpen={isOpen} setIsOpen={setIsOpen} />
+        <div className='lg:hidden'>
+         
+          <SideBar isOpen={isOpen} setIsOpen={setIsOpen} />
+        </div>
       </div>
     );
 };

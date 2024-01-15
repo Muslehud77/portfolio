@@ -33,7 +33,7 @@ export const SideBar = ({ isOpen, setIsOpen }) => {
 
   return (
     <motion.nav
-      className={`nav ${isOpen ? "w-[100vw]" : "w-0"}`}
+      className={`nav ${isOpen ? "w-[100vw]" : "w-0"} relative`}
       initial={false}
       animate={isOpen ? "open" : "closed"}
       custom={height}
@@ -43,9 +43,9 @@ export const SideBar = ({ isOpen, setIsOpen }) => {
         className="background bg-black/80 backdrop-blur-sm"
         variants={sidebar}
       />
-      <Navigation isOpen={isOpen} />
-
-      <div className="relative top-4 left-4">
+      <Navigation isOpen={isOpen} setIsOpen={setIsOpen} />
+      
+      <div className="absolute top-4 left-4">
         <Hamburger
           size={20}
           toggled={isOpen}

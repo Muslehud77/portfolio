@@ -65,10 +65,14 @@ const EncryptButton = () => {
       onMouseLeave={stopScramble}
       className="group relative overflow-hidden rounded-lg border-[1px] border-white  px-4 py-2 font-mono font-medium uppercase text-slate-300 transition-colors hover:text-indigo-300"
     >
-      <div className="relative z-10 flex items-center gap-2">
+      <a
+        download="Resume_Sheik-Musleh-Uddin_React-Developer.pdf"
+        href="Resume_Sheik-Musleh-Uddin_React-Developer.pdf"
+        className="relative z-10 flex items-center gap-2"
+      >
         <GoDownload />
         <span>{text}</span>
-      </div>
+      </a>
       <motion.span
         initial={{
           y: "100%",

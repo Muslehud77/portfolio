@@ -7,7 +7,7 @@ import { MdHomeRepairService } from "react-icons/md";
 
 import { GrContact } from "react-icons/gr";
 import { Link } from "react-scroll";
-import { motion } from 'framer-motion';
+
 import Resume from "./ResumeButton";
 
  

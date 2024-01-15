@@ -4,7 +4,7 @@ import Services from "./Services";
 
 const ServicesSection = () => {
     return (
-        <div className="">
+        <div className="mt-20 lg:mt-0">
             <ServiceHead/>
             <Services/>
         </div>
