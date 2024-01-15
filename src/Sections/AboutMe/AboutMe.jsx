@@ -8,6 +8,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 
 
+
 const AboutMe = () => {
   const ref = useRef(null)
   const lineRef = useRef(null)
@@ -92,6 +93,7 @@ const AboutMe = () => {
           <div ref={lineRef} className="w-0 h-1 bg-white"></div>
           <TechNologies />
         </div>
+ 
       </div>
     </div>
   );

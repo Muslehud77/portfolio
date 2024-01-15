@@ -8,6 +8,7 @@ import ContactActions from "./ContactActions";
 import ContactDescription from "./ContactDescription";
 import ContactName from "./ContactName";
 import ContactEmail from "./ContactEmail";
+import Reveal from "../../Components/Reveal/Reveal";
 
 const Contact = () => {
   const {
@@ -88,70 +89,77 @@ const Contact = () => {
   };
 
   return (
-    <div id="Contact" className="w-full block relative ">
+    <div id="Contact" className="w-full block relative mt-10">
       <section className="px-4 py-12 ">
-        <div
-          data-lenis-prevent
-          className="h-96 bg-slate-950/70 backdrop-blur rounded-lg w-full max-w-3xl mx-auto  overflow-x-hidden overflow-y-auto shadow-xl cursor-text font-mono"
-        >
-          <div className="w-full p-3 bg-slate-900 flex items-center gap-1 sticky top-0">
-            <div className="w-3 h-3 rounded-full bg-red-500"></div>
-            <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-            <div className="w-3 h-3 rounded-full bg-green-500"></div>
-            <span className="text-sm text-slate-200 font-semibold absolute left-[50%] -translate-x-[50%]">
-              contact me
-            </span>
-          </div>
+        <Reveal>
+          {" "}
+          <div
+            data-lenis-prevent
+            className="h-96 bg-slate-950/70 backdrop-blur rounded-lg w-full max-w-3xl mx-auto  overflow-x-hidden overflow-y-auto shadow-xl cursor-text font-mono"
+          >
+            <div className="w-full p-3 bg-slate-900 flex items-center gap-1 sticky top-0">
+              <div className="w-3 h-3 rounded-full bg-red-500"></div>
+              <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+              <div className="w-3 h-3 rounded-full bg-green-500"></div>
+              <span className="text-sm text-slate-200 font-semibold absolute left-[50%] -translate-x-[50%]">
+                contact me
+              </span>
+            </div>
 
-          <div className="p-2 text-slate-100 text-lg">
-            <p>Hey there! I'am excited to link 🔗</p>
+            <div className="p-2 text-slate-100 text-lg">
+              <p>Hey there! I'am excited to link 🔗</p>
 
-            <form ref={form} onSubmit={handleSubmit(onSubmit)}>
-              {/* email section      */}
+              <form ref={form} onSubmit={handleSubmit(onSubmit)}>
+                {/* email section      */}
 
-              <ContactEmail email={email} register={register} errors={errors} />
-
-              {/* name section  */}
-
-              <ContactName email={email} name={name} register={register} />
-
-              {/* description section  */}
-
-              <ContactDescription
-                name={name}
-                description={description}
-                onEnterPress={onEnterPress}
-                email={email}
-                register={register}
-              />
-            </form>
-            {/* actions */}
-            {!loading && !sent && (
-              <ContactActions
-                refToScroll={refToScroll}
-                description={description}
-                resetForm={resetForm}
-                sendEmail={sendEmail}
-              />
-            )}
-            {/* loading */}
-            {loading && <img className="w-28 mt-2" src={loader} />}
-
-            {/* success */}
-
-            {sent && (
-              <div ref={success} className="text-emerald-400">
-                <Typewriter
-                  options={{
-                    strings: ["Yay! Your message has been sent!"],
-                    autoStart: sent,
-                    onRemoveNode: resetForm,
-                  }}
+                <ContactEmail
+                  email={email}
+                  register={register}
+                  errors={errors}
                 />
-              </div>
-            )}
+
+                {/* name section  */}
+
+                <ContactName email={email} name={name} register={register} />
+
+                {/* description section  */}
+
+                <ContactDescription
+                  name={name}
+                  description={description}
+                  onEnterPress={onEnterPress}
+                  email={email}
+                  register={register}
+                />
+              </form>
+              {/* actions */}
+              {!loading && !sent && (
+                <ContactActions
+                  refToScroll={refToScroll}
+                  description={description}
+                  resetForm={resetForm}
+                  sendEmail={sendEmail}
+                />
+              )}
+              {/* loading */}
+              {loading && <img className="w-28 mt-2" src={loader} />}
+
+              {/* success */}
+
+              {sent && (
+                <div ref={success} className="text-emerald-400">
+                  <Typewriter
+                    options={{
+                      strings: ["Yay! Your message has been sent!"],
+                      autoStart: sent,
+                      onRemoveNode: resetForm,
+                    }}
+                  />
+                </div>
+              )}
+            </div>
           </div>
-        </div>
+        </Reveal>
       </section>
     </div>
   );

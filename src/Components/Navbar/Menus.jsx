@@ -7,6 +7,8 @@ import { MdHomeRepairService } from "react-icons/md";
 
 import { GrContact } from "react-icons/gr";
 import { Link } from "react-scroll";
+import { motion } from 'framer-motion';
+import Resume from "./ResumeButton";
 
  
 
@@ -34,7 +36,7 @@ const Menus = ({hidden}) => {
       name: "Services",
       icon: <MdHomeRepairService />,
       dis: "translate-x-48",
-      offset: -300,
+      offset: -200,
     },
     {
       name: "Contact",
@@ -67,7 +69,7 @@ const Menus = ({hidden}) => {
       <div
         className={`border ${
           !hidden && "opacity-50 bg-black"
-        } hover:opacity-100 hover:bg-transparent  duration-300 scale-90 max-h-[4.4rem] px-6 rounded-xl backdrop-blur-sm`}
+        } hover:opacity-100 hover:bg-transparent relative  duration-300 scale-90 max-h-[4.4rem] px-6 rounded-xl backdrop-blur-sm`}
       >
         <ul className="flex relative">
           <span
@@ -106,6 +108,13 @@ const Menus = ({hidden}) => {
             </li>
           ))}
         </ul>
+        <div
+          className={`absolute transition-all duration-300 -top-12 right-0 ${
+            active >= 3 && "-translate-x-64"
+          }`}
+        >
+          <Resume />
+        </div>
       </div>
     </div>
   );

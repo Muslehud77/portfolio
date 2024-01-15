@@ -1,11 +1,16 @@
+/* eslint-disable react/prop-types */
 
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
+import Reveal from "../../Components/Reveal/Reveal";
 
 
 const ServiceCard = ({children}) => {
   return (
     <div className="flex justify-center items-center w-full h-full mb-10 lg:mb-0">
-      <TiltCard>{children}</TiltCard>
+      
+  
+        <TiltCard>{children}</TiltCard>
+     
     </div>
   );
 };
@@ -58,7 +63,7 @@ const TiltCard = ({ children }) => {
         rotateX,
         transformStyle: "preserve-3d",
       }}
-      className="relative h-96 w-full rounded-xl bg-gradient-to-br from-indigo-300 to-violet-300"
+      className="relative h-96 w-full rounded-xl bg-gradient-to-br from-gray-500 to-violet-100"
     >
       <div
         style={{
@@ -67,7 +72,7 @@ const TiltCard = ({ children }) => {
         }}
         className="absolute inset-4 grid place-content-center rounded-xl bg-white shadow-lg"
       >
-      {children}
+        <Reveal> {children}</Reveal>
       </div>
     </motion.div>
   );
