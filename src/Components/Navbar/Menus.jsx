@@ -6,7 +6,7 @@ import { BsRocketTakeoffFill } from "react-icons/bs";
 import { MdHomeRepairService } from "react-icons/md";
 
 import { GrContact } from "react-icons/gr";
-import { Link } from "react-scroll";
+import { Link, scrollSpy } from "react-scroll";
 
 import Resume from "./ResumeButton";
 
@@ -59,6 +59,8 @@ const Menus = ({hidden}) => {
     
   }
 
+  
+  
   
 
 

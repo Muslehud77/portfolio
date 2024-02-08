@@ -2,13 +2,38 @@ import device from "../../Assets/Projects/Device/thumbDevice.png";
 import { FiGithub } from "react-icons/fi";
 import { IoOpenOutline } from "react-icons/io5";
 import Reveal from "./../../Components/Reveal/Reveal";
+import { useEffect, useRef, useState } from "react";
 const Device = () => {
+  const project = useRef(null);
+
+  const [isIntersecting, setIntersecting] = useState(0);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          setIntersecting(entry.intersectionRatio);
+        });
+      },
+      { threshold: [0, 1] }
+    );
+
+    observer.observe(project.current);
+  }, []);
+
   return (
-    <div className="lg:flex justify-center items-center w-[100vw] text-right group">
+    <div
+      ref={project}
+      className="lg:flex justify-center items-center w-[100vw] text-right group"
+    >
       <Reveal>
         <div className="w-full h-full relative mb-5 lg:mb-0">
           <img src={device} className="rounded-xl" />
-          <div className="bg-black transition-all rounded-xl duration-500 opacity-50 group-hover:bg-opacity-0 w-full h-full absolute inset-0"></div>
+          <div
+            className={`bg-black transition-all rounded-xl duration-500 opacity-50 ${
+              isIntersecting >= 0.9 && "bg-opacity-0"
+            } w-full h-full absolute inset-0`}
+          ></div>
         </div>
       </Reveal>
       <div className="space-y-5">
@@ -18,7 +43,13 @@ const Device = () => {
             <h2 className="text-3xl text-white font-semibold">DeviceDynasty</h2>
           </div>
         </Reveal>
-        <div className="transition-all xl:w-[700px] duration-500 group-hover:shadow-[0_0_30px_white] shadow-[0_0_30px_#313647] rounded-xl text-right bg-[#09081F] backdrop-blur-sm p-5 lg:-ml-16">
+        <div
+          className={`transition-all xl:w-[700px] duration-500 ${
+            isIntersecting >= 0.9
+              ? "shadow-[0_0_30px_white]"
+              : "shadow-[0_0_30px_#313647]"
+          }  rounded-xl text-right bg-[#09081F] backdrop-blur-sm p-5 lg:-ml-16`}
+        >
           <Reveal>
             <h3 className="text-xl ">
               It's a technology marketplace website where users can purchase

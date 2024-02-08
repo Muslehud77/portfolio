@@ -13,7 +13,7 @@ const Banner = () => {
       <div id="Musleh" ref={ref} className="relative h-screen w-screen">
         <BackgroundVideo />
 
-        <div className="flex justify-center items-center w-full h-full"></div>
+        <div className="flex justify-center items-center w-full h-full container mx-auto"></div>
         <div className="absolute top-0 flex flex-col items-center justify-center  h-screen text-start w-screen">
           <div className="flex  px-10 flex-col md:flex-row justify-center gap-10 items-center mt-20">
             <div className="space-y-1">
