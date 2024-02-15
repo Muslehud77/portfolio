@@ -1,13 +1,15 @@
 /* eslint-disable react/prop-types */
 
-import { useRef } from 'react';
+
 import { IoMdCheckmarkCircleOutline } from 'react-icons/io';
 
 const ContactEmail = ({ email, register, errors }) => {
 
 
+
+
   return (
-    <div className="">
+    <div >
       <p>
         To start, could you give me{" "}
         <span className="text-violet-300">your email?</span>
@@ -26,6 +28,7 @@ const ContactEmail = ({ email, register, errors }) => {
               <span className="opacity-50">Enter email: </span>
             </p>
           </div>
+          
           <input
             autoComplete="off"
             {...register("email", {
@@ -34,6 +37,7 @@ const ContactEmail = ({ email, register, errors }) => {
               },
             })}
             className="md:pl-2 border-none outline-none bg-transparent w-full md:max-w-96"
+            
           />
         </div>
       )}

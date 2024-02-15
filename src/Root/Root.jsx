@@ -10,7 +10,10 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 import Projects from '../Sections/Projects/Projects';
 import BackgroundOverlay from '../Components/Background/BackgroundOverlay';
 import Contact from '../Sections/Contact/Contact';
-import ServicesSection from '../Sections/Services/ServicesSection';
+
+import { TracingBeam } from '../Components/ScrollProgress/ScrollProgress';
+import ServicesSection from '../Services/ServicesSection';
+
 
 
 
@@ -42,15 +45,17 @@ const Root = () => {
    },[])
 
     return (
-      <div  className="overflow-x-hidden ">
+      <div className="overflow-x-hidden ">
         <Navbar />
-          <Banner />
-          <BackgroundOverlay/>
+        <Banner />
+        <BackgroundOverlay />
+        <TracingBeam>
+          {" "}
           <AboutMe />
-          <Projects/>
-          <ServicesSection/>
-          <Contact/>
-
+        </TracingBeam>
+        <Projects />
+        <ServicesSection />
+        <Contact />
       </div>
     );
 };

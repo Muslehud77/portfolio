@@ -1,7 +1,9 @@
 /* eslint-disable react/prop-types */
 
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-import Reveal from "../../Components/Reveal/Reveal";
+import Reveal from "../Components/Reveal/Reveal";
+
+
 
 
 const ServiceCard = ({children}) => {
@@ -70,7 +72,7 @@ const TiltCard = ({ children }) => {
           transform: "translateZ(75px)",
           transformStyle: "preserve-3d",
         }}
-        className="absolute inset-4 grid place-content-center rounded-xl bg-white shadow-lg"
+        className="absolute inset-4 grid place-content-center rounded-xl shadow-lg bg-[#111827]"
       >
         <Reveal> {children}</Reveal>
       </div>

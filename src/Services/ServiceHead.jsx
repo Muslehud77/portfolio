@@ -1,4 +1,5 @@
-import Reveal from "../../Components/Reveal/Reveal";
+import Reveal from "../Components/Reveal/Reveal";
+
 
 
 const ServiceHead = () => {

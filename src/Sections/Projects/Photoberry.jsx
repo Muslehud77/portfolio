@@ -31,7 +31,7 @@ const Photoberry = () => {
   return (
     <div
       ref={project}
-      className="lg:flex flex-row-reverse justify-center items-center text-left group"
+      className="lg:flex  flex-row-reverse md:flex-row justify-center items-center text-right group"
     >
       <Reveal>
         <div className="w-full h-full relative mb-5 lg:mb-0">
@@ -58,7 +58,7 @@ const Photoberry = () => {
             isIntersecting >= 0.9
               ? "shadow-[0_0_30px_white]"
               : "shadow-[0_0_30px_#313647]"
-          }  rounded-xl text-left bg-[#09081F] backdrop-blur-sm p-5 lg:-mr-16`}
+          }  rounded-xl text-right bg-[#09081F] backdrop-blur-sm p-5 lg:-ml-16`}
         >
           <Reveal>
             {" "}
@@ -71,7 +71,7 @@ const Photoberry = () => {
         </div>
         <div className="space-y-10">
           <Reveal>
-            <div className="tracking-widest  flex flex-wrap justify-start lg:ml-2">
+            <div className="tracking-widest  flex flex-wrap justify-end lg:ml-2">
               <span className="text-sm mr-2 font-serif">React.Js</span>
               <span className="text-sm mr-2 font-serif">Three.Js</span>
               <span className="text-sm mr-2 font-serif">Aos</span>
@@ -81,7 +81,7 @@ const Photoberry = () => {
             </div>
           </Reveal>
           <Reveal>
-            <div className=" flex justify-start items-center gap-1 text-white">
+            <div className=" flex justify-end items-center gap-1 text-white">
               <a
                 target="_blank"
                 rel="noreferrer"

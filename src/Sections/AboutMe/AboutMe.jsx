@@ -24,7 +24,7 @@ const AboutMe = () => {
     });
 
     const createAnimation=()=> {
-      let allMasks = document.querySelectorAll(".word ");
+      let allMasks = document.querySelectorAll(".word");
       
       let tl = gsap.timeline({
         scrollTrigger: {
