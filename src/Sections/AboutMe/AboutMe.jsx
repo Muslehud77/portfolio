@@ -72,7 +72,7 @@ const AboutMe = () => {
     <div className="relative">
       <div
         id="About"
-        className="flex justify-around h-screen flex-col md:flex-row container mx-auto p-10 md:justify-center items-start "
+        className="flex justify-around h-screen flex-col md:flex-row container mx-auto p-10 md:mb-10 lg:mb-0 md:justify-center items-start "
       >
         <div className="w-full md:w-1/2">
           <h1

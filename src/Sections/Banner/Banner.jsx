@@ -14,7 +14,7 @@ const Banner = () => {
  
 
         <div className=" flex flex-col items-center justify-center  h-screen text-start w-screen">
-          <div className="flex flex-col md:flex-row justify-center gap-10 items-center mt-16">
+          <div className="flex px-10 flex-col md:flex-row justify-center gap-10 items-center mt-16">
             <div className="space-y-1">
               <Reveal>
                 <h1 className="text-5xl xl:text-7xl text-white font-montserrat font-bold">
