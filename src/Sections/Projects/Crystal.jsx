@@ -35,7 +35,7 @@ useEffect(() => {
           <div className="w-full h-full relative mb-5 lg:mb-0">
             <img src={crystal} className="rounded-xl" />
             <div
-              className={`bg-black transition-all rounded-xl duration-500 opacity-50 ${
+              className={`bg-black transition-all rounded-xl duration-500 opacity-70 md:opacity-40 lg:opacity-80 ${
                 isIntersecting >= 0.9 && "bg-opacity-0"
               } w-full h-full absolute inset-0`}
             ></div>
@@ -51,12 +51,12 @@ useEffect(() => {
           <div
             className={`transition-all xl:w-[700px] duration-500 ${
               isIntersecting >= 0.9
-                ? "shadow-[0_0_30px_white]"
+                ? "lg:shadow-[0_0_30px_white]"
                 : "shadow-[0_0_30px_#313647]"
             }  rounded-xl text-right bg-[#09081F] backdrop-blur-sm p-5 lg:-ml-16`}
           >
             <Reveal>
-              <h3 className="text-xl ">
+              <h3 className="text-lg text-justify lg:text-right">
                 It's a café website that allows users to view the menu and place
                 orders online. and allows admin to add, edit, and delete items.
               </h3>
