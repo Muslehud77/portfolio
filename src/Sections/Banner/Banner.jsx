@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
-import {  useEffect, useRef } from "react";
-import BackgroundVideo from "../../Components/Background/BackgoundVideo";
+import {  useRef } from "react";
+
 import Reveal from "../../Components/Reveal/Reveal";
 import me from "../../Assets/personal.png"
 import { FaArrowRightLong, FaFacebook, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa6";
@@ -10,15 +10,14 @@ const Banner = () => {
 
 
     return (
-      <div id="Musleh" ref={ref} className="relative h-screen w-screen">
-        <BackgroundVideo />
+      <div id="Musleh" ref={ref} className="relative  h-screen w-screen">
+ 
 
-        <div className="flex justify-center items-center w-full h-full container mx-auto"></div>
-        <div className="absolute top-0 flex flex-col items-center justify-center  h-screen text-start w-screen">
-          <div className="flex  px-10 flex-col md:flex-row justify-center gap-10 items-center mt-20">
+        <div className=" flex flex-col items-center justify-center  h-screen text-start w-screen">
+          <div className="flex flex-col md:flex-row justify-center gap-10 items-center mt-16">
             <div className="space-y-1">
               <Reveal>
-                <h1 className="text-5xl md:text-7xl text-white font-montserrat font-bold">
+                <h1 className="text-5xl xl:text-7xl text-white font-montserrat font-bold">
                   Hi, I'm <br /> Musleh{" "}
                   <span className="text-lg">based in China.</span>
                 </h1>
@@ -86,10 +85,9 @@ const Banner = () => {
                 </div>
               </Reveal>
             </div>
-            <div className="hidden image md:flex">
+            <div className="hidden  md:flex">
               <Reveal>
-                {" "}
-                {/* <img className="hidden image md:flex w-96 opacity-80" src={me} /> */}
+              
                 <Image me={me} />
               </Reveal>
             </div>

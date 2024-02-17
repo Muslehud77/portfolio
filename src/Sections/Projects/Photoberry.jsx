@@ -81,7 +81,7 @@ const Photoberry = () => {
             </div>
           </Reveal>
           <Reveal>
-            <div className=" flex justify-end items-center gap-1 text-white">
+            <div className=" flex justify-e items-center gap-1 text-white">
               <a
                 target="_blank"
                 rel="noreferrer"

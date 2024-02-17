@@ -53,10 +53,7 @@ export const TracingBeam = ({
 
 
   return (
-    <motion.div
-      ref={ref}
-      className={`relative w-full   h-full `}
-    >
+    <motion.div ref={ref} className={`relative w-full   h-full `}>
       <div className="absolute z-10  top-2">
         <motion.div
           transition={{
@@ -77,10 +74,8 @@ export const TracingBeam = ({
               delay: 0.5,
             }}
             animate={{
-              backgroundColor:
-                scrollYProgress.get() > 0 ? "white" : "emerald",
-              borderColor:
-                scrollYProgress.get() > 0 ? "white" : "emerald-600",
+              backgroundColor: scrollYProgress.get() > 0 ? "white" : "emerald",
+              borderColor: scrollYProgress.get() > 0 ? "white" : "emerald-600",
             }}
             className="h-2 w-2 rounded-full border border-neutral-300 bg-white"
           />

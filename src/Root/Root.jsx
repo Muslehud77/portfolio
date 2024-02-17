@@ -1,6 +1,6 @@
 
 import { useEffect, useRef } from 'react';
-
+import BackgroundVideo from "../Components/Background/BackgoundVideo";
 import Navbar from '../Components/Navbar/Navbar';
 import AboutMe from '../Sections/AboutMe/AboutMe';
 import Banner from '../Sections/Banner/Banner';
@@ -45,13 +45,13 @@ const Root = () => {
    },[])
 
     return (
-      <div className="overflow-x-hidden ">
+      <div className="overflow-hidden ">
+       <BackgroundVideo />
         <Navbar />
         <Banner />
         <BackgroundOverlay />
         <TracingBeam>
-          {" "}
-          <AboutMe />
+          <AboutMe />{" "}
         </TracingBeam>
         <Projects />
         <ServicesSection />

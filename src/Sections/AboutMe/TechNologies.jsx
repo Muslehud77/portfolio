@@ -8,12 +8,15 @@ import img7 from '../../Assets/technologies/7.png'
 import img8 from '../../Assets/technologies/8.png'
 import img9 from '../../Assets/technologies/9.png'
 import img10 from '../../Assets/technologies/10.png'
-import Reveal from '../../Components/Reveal/Reveal'
+
 import { AnimatedTooltip } from '../../Components/Tooltip/Tooltip'
+import { useState } from 'react'
+import Reveal from '../../Components/Reveal/Reveal'
 
 const TechNologies = () => {
 
-    const cls = 'w-8 h-8 md:w-16 cursor-pointer hover:grayscale-[80%] md:h-16 hover:scale-110 transition-all duration-2 object-cover bg-black relative rounded'
+const [overflow,setOverflow] = useState(true)
+    
     const tech = [
       {
         id: 1,
@@ -77,18 +80,13 @@ const TechNologies = () => {
       },
     ];
     return (
-      <Reveal>
+      <Reveal overflow={overflow}>
         <div className="flex flex-wrap justify-center items-center gap-2 mt-2 ">
-        <AnimatedTooltip items={tech}/>
-          {/* <img className={cls} src={img1}></img>
-          <img className={cls} src={img2}></img>
-          <img className={cls} src={img3}></img>
-          <img className={cls} src={img4}></img>
-          <img className={cls} src={img5}></img>
-          <img className={cls} src={img6}></img>
-          <img className={cls} src={img7}></img>
-          <img className={cls} src={img8}></img>
-          <img className={cls} src={img9}></img> */}
+          <AnimatedTooltip
+            overflow={overflow}
+            setOverflow={setOverflow}
+            items={tech}
+          />
         </div>
       </Reveal>
     );

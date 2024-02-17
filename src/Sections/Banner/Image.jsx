@@ -58,7 +58,7 @@ const Tilt = () => {
         rotateX,
         transformStyle: "preserve-3d",
       }}
-      className="relative h-96 w-72 rounded-xl bg-gradient-to-br from-indigo-300/10 "
+      className="relative md:w-60 md:h-72 lg:h-96 lg:w-72 rounded-xl bg-gradient-to-br from-indigo-300/10 "
     >
       <div
         style={{
@@ -69,7 +69,7 @@ const Tilt = () => {
       >
         <img
           
-          className=" w-96 opacity-80"
+          className="md:w-56 lg:w-96 opacity-80"
           src={me}
         />
       </div>

@@ -7,7 +7,7 @@ import {
   useSpring,
 } from "framer-motion";
 
-export const AnimatedTooltip = ({ items }) => {
+export const AnimatedTooltip = ({ items, overflow, setOverflow }) => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const springConfig = { stiffness: 100, damping: 5 };
   const x = useMotionValue(0); // going to set this value on mouse move
@@ -32,8 +32,11 @@ export const AnimatedTooltip = ({ items }) => {
         <div
           className=""
           key={item.name}
-          onMouseEnter={() => setHoveredIndex(item.id)}
-          onMouseLeave={() => setHoveredIndex(null)}
+          onMouseEnter={() => {
+            setHoveredIndex(item.id);
+            setOverflow(false)
+          }}
+          onMouseLeave={() => {setHoveredIndex(null);  setOverflow(true)}}
         >
           <AnimatePresence mode="wait">
             {hoveredIndex === item.id && (
@@ -70,7 +73,7 @@ export const AnimatedTooltip = ({ items }) => {
             onMouseMove={handleMouseMove}
             src={item.image}
             alt={item.name}
-            className="w-8 h-8 md:w-16 cursor-pointer hover:grayscale-[80%] md:h-16 hover:scale-110 transition-all duration-2 object-cover bg-black relative rounded"
+            className="w-8 xl:w-16 cursor-pointer hover:grayscale-[80%]  hover:scale-110 transition-all duration-2 object-cover bg-black relative rounded"
           />
         </div>
       ))}

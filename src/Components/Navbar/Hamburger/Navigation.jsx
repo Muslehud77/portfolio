@@ -86,7 +86,7 @@ export const Navigation = ({ isOpen, setIsOpen }) => {
       <motion.ul
         className={`h-full ${
           isOpen ? "flex" : "hidden"
-        }  justify-center flex-col gap-5 items-center`}
+        }  justify-center flex-col md:flex-row gap-5 items-center`}
         variants={variants}
       >
         {menus.map((menu, i) => (
