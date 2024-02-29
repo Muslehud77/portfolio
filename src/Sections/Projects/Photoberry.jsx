@@ -11,7 +11,7 @@ const Photoberry = () => {
 
   const [isIntersecting, setIntersecting] = useState(0);
 
-  useEffect(() => {
+useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -21,9 +21,16 @@ const Photoberry = () => {
       { threshold: [0, 1] }
     );
 
-    return ()=>observer.observe(project.current);
-  }, []);
+    if (project.current) {
+      observer.observe(project.current);
+    }
 
+    return () => {
+      if (project.current) {
+        observer.unobserve(project.current);
+      }
+    };
+  }, []);
 
 
 

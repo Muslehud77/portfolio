@@ -8,7 +8,7 @@ const Device = () => {
 
   const [isIntersecting, setIntersecting] = useState(0);
 
-  useEffect(() => {
+useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -18,9 +18,16 @@ const Device = () => {
       { threshold: [0, 1] }
     );
 
-    return ()=>observer.observe(project.current);
-  }, []);
+    if (project.current) {
+      observer.observe(project.current);
+    }
 
+    return () => {
+      if (project.current) {
+        observer.unobserve(project.current);
+      }
+    };
+  }, []);
   return (
     <div
       ref={project}

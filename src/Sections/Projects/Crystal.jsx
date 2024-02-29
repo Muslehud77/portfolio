@@ -22,7 +22,7 @@ useEffect(() => {
     { threshold: [0, 1] }
   );
 
-  return ()=>observer.observe(project.current);
+  return observer.observe(project.current);
 }, []);
 
 
